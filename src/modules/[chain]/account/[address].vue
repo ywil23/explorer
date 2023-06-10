@@ -8,6 +8,7 @@ import {
 import DynamicComponent from '@/components/dynamic/DynamicComponent.vue';
 import DonutChart from '@/components/charts/DonutChart.vue';
 import { computed, ref } from '@vue/reactivity';
+import { onMounted } from 'vue';
 import { Icon } from '@iconify/vue';
 import 'vue-json-pretty/lib/styles.css';
 import type {
@@ -33,7 +34,9 @@ const balances = ref([] as Coin[]);
 const unbonding = ref([] as UnbondingResponses[]);
 const unbondingTotal = ref(0);
 const chart = {};
-
+onMounted(() => {
+  loadAccount(props.address);
+});
 const totalAmountByCategory = computed(() => {
   let sumDel = 0;
   delegations.value?.forEach((x) => {
@@ -87,7 +90,10 @@ function loadAccount(address: string) {
     });
   });
 }
-loadAccount(props.address);
+
+function updateEvent() {
+  loadAccount(props.address);
+}
 </script>
 <template>
   <div v-if="account">
@@ -130,16 +136,20 @@ loadAccount(props.address);
             <label
               for="send"
               class="btn btn-primary btn-sm mr-2"
-              @click="dialog.open('send', {})"
+              @click="dialog.open('send', {}, updateEvent)"
               >Send</label
             >
             <label
               for="transfer"
               class="btn btn-primary btn-sm"
               @click="
-                dialog.open('transfer', {
-                  chain_name: blockchain.current?.prettyName,
-                })
+                dialog.open(
+                  'transfer',
+                  {
+                    chain_name: blockchain.current?.prettyName,
+                  },
+                  updateEvent
+                )
               "
               >transfer</label
             >
@@ -164,7 +174,9 @@ loadAccount(props.address);
                 <div class="text-sm font-semibold">
                   {{ format.formatToken(balanceItem) }}
                 </div>
-                <div class="text-xs">≈${{ 0 }}</div>
+                <div class="text-xs">
+                  ≈${{ format.tokenValue(balanceItem) }}
+                </div>
               </div>
               <div
                 class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
@@ -193,7 +205,9 @@ loadAccount(props.address);
                 <div class="text-sm font-semibold">
                   {{ format.formatToken(delegationItem?.balance) }}
                 </div>
-                <div class="text-xs">≈${{ 0 }}</div>
+                <div class="text-xs">
+                  ≈${{ format.tokenValue(delegationItem?.balance) }}
+                </div>
               </div>
               <div
                 class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
@@ -231,7 +245,7 @@ loadAccount(props.address);
                 <div class="text-sm font-semibold">
                   {{ format.formatToken(rewardItem) }}
                 </div>
-                <div class="text-xs">≈${{ 0 }}</div>
+                <div class="text-xs">≈${{ format.tokenValue(rewardItem) }}</div>
               </div>
               <div
                 class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
@@ -265,7 +279,14 @@ loadAccount(props.address);
                     })
                   }}
                 </div>
-                <div class="text-xs">≈${{ 0 }}</div>
+                <div class="text-xs">
+                  ≈${{
+                    format.tokenValue({
+                      amount: String(unbondingTotal),
+                      denom: stakingStore.params.bond_denom,
+                    })
+                  }}
+                </div>
               </div>
               <div
                 class="text-xs truncate relative py-1 px-3 rounded-full w-fit text-primary mr-2"
@@ -291,17 +312,17 @@ loadAccount(props.address);
         <label
           for="delegate"
           class="btn btn-primary btn-sm mr-2"
-          @click="dialog.open('delegate', {})"
+          @click="dialog.open('delegate', {}, updateEvent)"
           >Delegate</label
         >
         <label
           for="withdraw"
           class="btn btn-primary btn-sm"
-          @click="dialog.open('withdraw', {})"
+          @click="dialog.open('withdraw', {}, updateEvent)"
           >Withdraw</label
         >
       </div>
-      <div class="overdflow-x-auto">
+      <div class="overflow-x-auto">
         <table class="table w-full text-sm table-zebra">
           <thead>
             <tr>
@@ -340,9 +361,13 @@ loadAccount(props.address);
                     for="delegate"
                     class="btn btn-primary btn-xs mr-2"
                     @click="
-                      dialog.open('delegate', {
-                        validator_address: v.delegation.validator_address,
-                      })
+                      dialog.open(
+                        'delegate',
+                        {
+                          validator_address: v.delegation.validator_address,
+                        },
+                        updateEvent
+                      )
                     "
                     >delegate</label
                   >
@@ -350,9 +375,13 @@ loadAccount(props.address);
                     for="redelegate"
                     class="btn btn-primary btn-xs mr-2"
                     @click="
-                      dialog.open('redelegate', {
-                        validator_address: v.delegation.validator_address,
-                      })
+                      dialog.open(
+                        'redelegate',
+                        {
+                          validator_address: v.delegation.validator_address,
+                        },
+                        updateEvent
+                      )
                     "
                     >Redelegate</label
                   >
@@ -360,9 +389,13 @@ loadAccount(props.address);
                     for="unbond"
                     class="btn btn-primary btn-xs"
                     @click="
-                      dialog.open('unbond', {
-                        validator_address: v.delegation.validator_address,
-                      })
+                      dialog.open(
+                        'unbond',
+                        {
+                          validator_address: v.delegation.validator_address,
+                        },
+                        updateEvent
+                      )
                     "
                     >Unbond</label
                   >
@@ -460,8 +493,8 @@ loadAccount(props.address);
               </td>
               <td class="truncate text-primary py-3" style="max-width: 200px">
                 <RouterLink :to="`/${chain}/tx/${v.txhash}`">
-                {{ v.txhash }}
-              </RouterLink>
+                  {{ v.txhash }}
+                </RouterLink>
               </td>
               <td class="flex items-center py-3">
                 <div class="mr-2">

@@ -7,6 +7,9 @@ const store = useTxDialog();
     :type="store.type"
     :sender="store.sender"
     :endpoint="store.endpoint"
-    :params="store.params"
+    :params='store.params'
+    :hd-path="store.hdPaths"
+    @view="store.view"
+    @confirmed="store.confirmed"
   ></ping-tx-dialog>
 </template>

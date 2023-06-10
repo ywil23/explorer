@@ -17,8 +17,8 @@ export const useWalletStore = defineStore('walletStore', {
       balances: [] as Coin[],
       delegations: [] as Delegation[],
       unbonding: [] as UnbondingResponses[],
-      rewards: {} as DelegatorRewards,
-      walletIsConnected: {} as WalletConnected
+      rewards: {total: [], rewards: []} as DelegatorRewards,
+      wallet: {} as WalletConnected
     };
   },
   getters: {
@@ -26,12 +26,11 @@ export const useWalletStore = defineStore('walletStore', {
       return useBlockchain();
     },
     connectedWallet() {
+      // @ts-ignore
+      if(this.wallet.cosmosAddress) return this.wallet
       const chainStore = useBlockchain();
       const key = chainStore.defaultHDPath;
-      let connected = this.walletIsConnected
-      if (!this.walletIsConnected?.cosmosAddress){
-        connected = JSON.parse(localStorage.getItem(key) || '{}');
-      }
+      const connected = JSON.parse(localStorage.getItem(key) || '{}');
       return connected
     },
     balanceOfStakingToken(): Coin {
@@ -54,14 +53,14 @@ export const useWalletStore = defineStore('walletStore', {
     },
     rewardAmount() {
       const stakingStore = useStakingStore();
+      // @ts-ignore
       const reward = this.rewards.total?.find(
-        (x) => x.denom === stakingStore.params.bond_denom
+        (x: Coin) => x.denom === stakingStore.params.bond_denom
       );
       return reward || { amount: '0', denom: stakingStore.params.bond_denom };
     },
     unbondingAmount() {
       let amt = 0;
-      let denom = '';
       this.unbonding.forEach((i) => {
         i.entries.forEach((e) => {
           amt += Number(e.balance);
@@ -122,18 +121,11 @@ export const useWalletStore = defineStore('walletStore', {
     disconnect() {
       const chainStore = useBlockchain();
       const key = chainStore.defaultHDPath;
-      console.log(key, 'key')
-      console.log(localStorage.getItem(key))
       localStorage.removeItem(key);
-      this.walletIsConnected = null
       this.$reset()
     },
-    setConnectedWallet(value: any) {
-      const chainStore = useBlockchain();
-      const key = chainStore.defaultHDPath;
-      this.walletIsConnected = value || {}
-      // JSON.parse(localStorage.getItem(key) || '{}');
-      return this.walletIsConnected
+    setConnectedWallet(value: WalletConnected) {
+      if(value) this.wallet = value 
     },
     suggestChain() {
       // const router = useRouter()

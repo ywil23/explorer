@@ -51,9 +51,10 @@ export function formatTokenAmount(
   tokenDenom = 'uatom',
   format = true
 ) {
-  const denom = tokenDenom?.denom_trace
-    ? tokenDenom?.denom_trace?.base_denom
-    : tokenDenom;
+  const denom = typeof tokenDenom === 'string'
+    ? tokenDenom
+    // @ts-ignore
+    : tokenDenom?.denom_trace?.base_denom;
   let amount = 0;
   const asset = assets.find((a: any) => a.base === denom);
   let exp = asset
@@ -79,60 +80,6 @@ export function numberWithCommas(x: any) {
   return parts.join('.');
 }
 
-export function tokenFormatter(tokens: any, denoms = {}, decimal = 2) {
-  if (Array.isArray(tokens)) {
-    return tokens.map((t) => formatToken(t, denoms, decimal)).join(', ');
-  }
-  return formatToken(tokens, denoms, 2);
-}
-export function formatToken(
-  token: any,
-  IBCDenom = {},
-  decimals = 2,
-  withDenom = true
-) {
-  if (token) {
-    const denom = IBCDenom[token.denom] || token.denom;
-    if (withDenom) {
-      return `${formatTokenAmount(
-        token.amount,
-        decimals,
-        denom
-      )} ${formatTokenDenom(denom)}`;
-    }
-    return formatTokenAmount(token.amount, decimals, denom);
-  }
-  return token;
-}
-export function formatTokenDenom(tokenDenom: any) {
-  if (tokenDenom && tokenDenom.code === undefined) {
-    let denom = tokenDenom.denom_trace
-      ? tokenDenom.denom_trace.base_denom
-      : tokenDenom;
-    const chains = getLocalChains();
-    const selected = localStorage.getItem('selected_chain');
-    const selChain = chains[selected];
-    const nativeAsset = selChain.assets.find((a) => a.base === denom);
-    if (nativeAsset) {
-      denom = nativeAsset.symbol;
-    } else {
-      const config = Object.values(chains);
-      config.forEach((x) => {
-        if (x.assets) {
-          const asset = x.assets.find((a) => a.base === denom);
-          if (asset) denom = asset.symbol;
-        }
-      });
-    }
-    return denom.length > 10
-      ? `${denom.substring(0, 7).toUpperCase()}..${denom.substring(
-          denom.length - 3
-        )}`
-      : denom.toUpperCase();
-  }
-  return '';
-}
-
 export function isToken(value: string) {
   let is = false;
   if (Array.isArray(value)) {
@@ -154,4 +101,69 @@ export function isHexAddress(v: any) {
   // const re = /^[A-Z\d]{40}$/
   // return re.test(v)
   return v.length === 28;
+}
+
+export function hexToRgb(hex: string) {
+  // remove '#'
+  hex = hex.replace('#', '');
+  // red
+  const r = parseInt(hex.substring(0, 2), 16);
+  // green
+  const g = parseInt(hex.substring(2, 4), 16);
+  // blue
+  const b = parseInt(hex.substring(4, 6), 16);
+
+  return {
+    color: 'rgb(' + r + ', ' + g + ', ' + b + ')',
+    r,
+    g,
+    b,
+  };
+}
+
+export function rgbToHsl(color: string) {
+  color = color.replace('rgb(', '');
+  color = color.replace(')', '');
+  const colorList = color.split(',') || [0, 0, 0];
+  // console.log(colorList, 'colorList')
+  const r = parseInt(colorList?.[0]) / 255;
+  const g = parseInt(colorList?.[1]) / 255;
+  const b = parseInt(colorList?.[2]) / 255;
+  // console.log(r,g,b, '88')
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let h = 0,
+    s = 0,
+    l = (max + min) / 2;
+
+  if (max == min) {
+    h = 0;
+    s = 0;
+  } else {
+    var d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
+    }
+    h = h / 6;
+  }
+
+  h = Math.round(h * 360);
+  s = Math.round(s * 100);
+  l = Math.round(l * 100);
+  return {
+    color: 'hsl(' + h + ', ' + s + '%, ' + l + '%)',
+    value: h + ' ' + s + ' ' + l,
+    h,
+    s,
+    l,
+  };
 }
