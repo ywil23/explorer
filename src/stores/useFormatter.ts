@@ -85,6 +85,7 @@ export const useFormatter = defineStore('formatter', {
       }
     },
     price(denom: string, currency = "usd") {
+      if(!denom || denom.length < 2) return 0
       const info = this.priceInfo(denom);
       return info ? info[currency] || 0 : 0;
     },
@@ -101,13 +102,21 @@ export const useFormatter = defineStore('formatter', {
       }
       return ""
     },
+    specialDenom(denom: string) {
+      switch(true) {
+        case denom.startsWith('u'): return 6
+        case denom.startsWith("a"): return 18
+        case denom==='inj': return 18
+      }
+      return 0
+    },
     tokenValueNumber(token?: Coin) {
-      if(!token) return 0
+      if(!token || !token.denom) return 0
       // find the symbol, 
-      const symbol = this.dashboard.coingecko[token.denom]?.symbol || "" 
+      const symbol = this.dashboard.coingecko[token.denom]?.symbol || token.denom 
       // convert denomation to to symbol
       const exponent =
-        this.dashboard.coingecko[symbol.toLowerCase()]?.exponent || 0;
+        this.dashboard.coingecko[symbol?.toLowerCase()]?.exponent || this.specialDenom(token.denom);
       // cacualte amount of symbol
       const amount = Number(token.amount) / (10 ** exponent)
       const value = amount * this.price(token.denom)
@@ -226,6 +235,10 @@ export const useFormatter = defineStore('formatter', {
     },
     numberAndSign(input: number, fmt = '+0,0') {
       return numeral(input).format(fmt);
+    },
+    toLocaleDate(time?: string | number | Date) {
+      if(!time) return ""
+      return new Date(time).toLocaleString(navigator.language)
     },
     toDay(time?: string | number| Date, format = 'long') {
       if (!time) return '';
