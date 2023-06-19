@@ -106,7 +106,22 @@ export function isHexAddress(v: any) {
 export function isBech32Address(v?: string) {
   if(!v) return ""
   const pattern = /^[a-z\d]+1[a-z\d]{38}$/g
-  return v.search(pattern) > -1
+  return String(v).search(pattern) > -1
+}
+
+export function formatSeconds(value?: string) {
+  if(!value) return ''
+  const duration = Number(value.replace(/s/, ''))
+  if(duration > 24*60*60) {
+    return `${duration / ( 24 * 60 * 60)} days`
+  }
+  if(duration > 60*60) {
+    return `${duration / (60 * 60)} hours`
+  }    
+  if(duration > 60) {
+    return `${duration / 60} mins`
+  }
+  return value
 }
 
 export function hexToRgb(hex: string) {

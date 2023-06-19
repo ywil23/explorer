@@ -9,12 +9,10 @@ const props = defineProps({
 });
 
 const txs = computed(() => {
-  return (
-    props.value?.map((x) => ({
-      hash: hashTx(fromBase64(x)),
-      tx: decodeTxRaw(fromBase64(x)),
-    })) || []
-  );
+  return props.value?.map((x) => ({
+    hash: hashTx(fromBase64(x)),
+    tx: decodeTxRaw(fromBase64(x)),
+  })) || []
 });
 
 const format = useFormatter();
@@ -48,6 +46,6 @@ const chain = useBlockchain();
         </tr>
       </tbody>
     </table>
-    <div v-else>[]</div>
+    <div v-else class="text-center">No Transactions</div>
   </div>
 </template>

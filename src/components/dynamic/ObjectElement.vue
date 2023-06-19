@@ -9,16 +9,12 @@ const props = defineProps(['value']);
       <tbody>
         <tr v-for="(v, k) of value">
           <td
-            class="capitalize whitespace-break-spaces w-1/5"
-            style="min-width: 180px"
+            class="capitalize whitespace-break-spaces min-w-max"
           >
             {{ String(k).replaceAll('_', ' ') }}
           </td>
-          <td>
-            <div
-              class="overflow-hidden w-auto whitespace-normal"
-              style="max-width: 1000px"
-            >
+          <td class="w-4/5">
+            <div class="overflow-hidden w-auto whitespace-normal" >
               <Component
                 v-if="v"
                 :is="select(v, 'horizontal')"

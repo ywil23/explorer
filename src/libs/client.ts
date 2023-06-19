@@ -2,13 +2,15 @@ import { fetchData } from '@/libs';
 import { DEFAULT } from '@/libs';
 import {
   adapter,
-  withCustomAdapter,
   type Request,
   type RequestRegistry,
-  type Registry,
   type AbstractRegistry,
+  findApiProfileByChain,
+  registryChainProfile,
+  withCustomRequest,
 } from './registry';
-import { PageRequest } from '@/types';
+import { PageRequest,type Coin } from '@/types';
+import { CUSTOM } from './custom_api/evmos'
 
 export class BaseRestClient<R extends AbstractRegistry> {
   endpoint: string;
@@ -22,7 +24,7 @@ export class BaseRestClient<R extends AbstractRegistry> {
     Object.keys(args).forEach((k) => {
       url = url.replace(`{${k}}`, args[k] || '');
     });
-    return fetchData<T>(url, adapter);
+    return fetchData<T>(url, request.adapter);
   }
 }
 
@@ -30,6 +32,13 @@ export class CosmosRestClient extends BaseRestClient<RequestRegistry> {
   static newDefault(endpoint: string) {
     return new CosmosRestClient(endpoint, DEFAULT)
   }
+
+  static newStrategy(endpoint: string, chain: any) {
+    registryChainProfile('evmos', withCustomRequest(DEFAULT, CUSTOM))
+    const re = findApiProfileByChain(chain.chainName)
+    return new CosmosRestClient(endpoint, re || DEFAULT)
+  }
+
   // Auth Module
   async getAuthAccounts(page?: PageRequest) {
     if(!page) page = new PageRequest()
@@ -49,12 +58,20 @@ export class CosmosRestClient extends BaseRestClient<RequestRegistry> {
   async getBankDenomMetadata() {
     return this.request(this.registry.bank_denoms_metadata, {});
   }
-  async getBankSupply(page?: PageRequest) {    if(!page) page = new PageRequest()
+  async getBankSupply(page?: PageRequest) {    
+    if(!page) page = new PageRequest()
     const query =`?${page.toQueryString()}`;
     return this.request(this.registry.bank_supply, {}, query);
   }
   async getBankSupplyByDenom(denom: string) {
-    return this.request(this.registry.bank_supply_by_denom, { denom });
+    let supply;
+    try{
+       supply = await this.request(this.registry.bank_supply_by_denom, { denom });
+    } catch(err) {
+      // will move this to sdk version profile later
+      supply = await this.request({url: "/cosmos/bank/v1beta1/supply/by_denom?denom={denom}", adapter } as Request<{ amount: Coin }>, { denom });
+    }
+    return supply
   }
   // Distribution Module
   async getDistributionParams() {
@@ -215,6 +232,13 @@ export class CosmosRestClient extends BaseRestClient<RequestRegistry> {
   async getTxsBySender(sender: string) {
     const query = `?pagination.reverse=true&events=message.sender='${sender}'`;
     return this.request(this.registry.tx_txs, {}, query);
+  }
+  // query ibc sending msgs
+  // ?&pagination.reverse=true&events=send_packet.packet_src_channel='${channel}'&events=send_packet.packet_src_port='${port}'
+  // query ibc receiving msgs
+  // ?&pagination.reverse=true&events=recv_packet.packet_dst_channel='${channel}'&events=recv_packet.packet_dst_port='${port}'
+  async getTxs(query: string, params: any) {
+    return this.request(this.registry.tx_txs, params, query);
   }
   async getTxsAt(height: string | number) {
     return this.request(this.registry.tx_txs_block, { height });

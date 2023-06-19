@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from '@vue/reactivity';
 import { useBaseStore, useFormatter } from '@/stores';
-const props = defineProps(['height', 'chain']);
+const props = defineProps(['chain']);
 
 const tab = ref('blocks');
 
@@ -19,7 +19,10 @@ const list = computed(() => {
     <div>
         <div class="tabs tabs-boxed bg-transparent mb-4">
             <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === 'blocks' }"
-                @click="tab = 'blocks'">Blocks</a>
+                @click="tab = 'blocks'">Recent</a>
+            <RouterLink class="tab text-gray-400 uppercase" 
+                :to="`/${chain}/block/${Number(base.latest?.block?.header.height||0) + 10000}`"
+                >Future</RouterLink>
             <a class="tab text-gray-400 uppercase" :class="{ 'tab-active': tab === 'transactions' }"
                 @click="tab = 'transactions'">Transactions</a>
         </div>
@@ -48,7 +51,7 @@ const list = computed(() => {
 
         <div v-show="tab === 'transactions'" class="bg-base-100 rounded overflow-x-auto">
             <table class="table w-full table-compact">
-                <thead>
+                <thead class="bg-base-200">
                     <tr>
                         <th style="position: relative; z-index: 2;">Height</th>
                         <th style="position: relative; z-index: 2;">Hash</th>
@@ -57,7 +60,7 @@ const list = computed(() => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(item, index) in base.txsInRecents" :index="index">
+                    <tr v-for="(item, index) in base.txsInRecents" :index="index" class="hover">
                         <td class="text-sm text-primary">
                             <RouterLink :to="`/${props.chain}/block/${item.height}`">{{ item.height }}</RouterLink>
                         </td>
@@ -74,7 +77,7 @@ const list = computed(() => {
             <div class="p-4">
                 <div class="alert relative bg-transparent">
                     <div class="alert  absolute inset-x-0 inset-y-0 w-full h-full bg-info opacity-10"></div>
-                    <div class="text-info">
+                    <div class="text-info flex gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             class="stroke-current flex-shrink-0 w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

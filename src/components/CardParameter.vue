@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue';
 import { useFormatter } from '@/stores';
+import { formatSeconds } from '@/libs/utils';
 const props = defineProps({
   cardItem: {
     type: Object as PropType<{ title: string; items: Array<any> }>,
@@ -12,6 +13,9 @@ function calculateValue(value: any) {
   if (Array.isArray(value)) {
     return (value[0] && value[0].amount) || '-';
   }
+  if(String(value).search(/^\d+s$/g) > -1) {
+    return formatSeconds(value)
+  }
   const newValue = Number(value);
   if (`${newValue}` === 'NaN' || typeof value === 'boolean') {
     return value;
@@ -21,6 +25,11 @@ function calculateValue(value: any) {
     return formatter.formatDecimalToPercent(value);
   }
   return newValue;
+}
+
+function formatTitle(v: string) {
+  if(!v) return ""
+  return v.replace(/_/g, " ")
 }
 </script>
 <template>
@@ -37,7 +46,7 @@ function calculateValue(value: any) {
         :key="index"
         class="rounded-sm bg-active px-4 py-2"
       >
-        <div class="text-xs mb-2 text-secondary">{{ item?.subtitle }}</div>
+        <div class="text-xs mb-2 text-secondary capitalize">{{ formatTitle(item?.subtitle) }}</div>
         <div class="text-base text-main">{{ calculateValue(item?.value) }}</div>
       </div>
     </div>

@@ -59,7 +59,7 @@ function selected(route: any, nav: NavLink) {
       class="w-64 fixed z-50 left-0 top-0 bottom-0 overflow-auto bg-base-100 border-r border-gray-100 dark:border-gray-700"
       :class="{ block: sidebarShow, 'hidden xl:!block': !sidebarShow }"
     >
-      <div class="flex items-center pl-4 py-4 mb-1">
+      <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center">
           <img class="w-10 h-10" src="../../assets/logo.svg" />
           <h1 class="flex-1 ml-3 text-2xl font-semibold dark:text-white">
@@ -70,7 +70,7 @@ function selected(route: any, nav: NavLink) {
           class="pr-4 cursor-pointer xl:!hidden"
           @click="sidebarShow = false"
         >
-          <Icon icon="mdi-close" class="text-3xl" />
+          <Icon icon="mdi-close" class="text-2xl" />
         </div>
       </div>
       <div
@@ -124,7 +124,7 @@ function selected(route: any, nav: NavLink) {
             </div>
           </div>
           <div class="collapse-content">
-            <div v-for="(el, key) of item?.children" class="menu bg-base-100 w-full">
+            <div v-for="(el, key) of item?.children" class="menu bg-base-100 w-full !p-0">
               <RouterLink
                 v-if="isNavLink(el)"
                 @click="sidebarShow = false"
@@ -147,7 +147,9 @@ function selected(route: any, nav: NavLink) {
                 <img
                   v-if="el?.icon?.image"
                   :src="el?.icon?.image"
-                  class="w-6 h-6 rounded-full mr-3 ml-4"
+                  class="w-6 h-6 rounded-full mr-3 ml-4 " :class="{
+                  'border border-gray-300 bg-white': selected($route, el),
+                }"
                 />
                 <div
                   class="text-base capitalize text-gray-500 dark:text-gray-300"
@@ -180,7 +182,7 @@ function selected(route: any, nav: NavLink) {
           <img
             v-if="item?.icon?.image"
             :src="item?.icon?.image"
-            class="w-6 h-6 rounded-full mr-3"
+            class="w-6 h-6 rounded-full mr-3 border border-blue-100"
           />
           <div
             class="text-base capitalize flex-1 text-gray-700 dark:text-gray-200 whitespace-nowrap"
@@ -277,10 +279,10 @@ function selected(route: any, nav: NavLink) {
         </a>
       </div>
     </div>
-    <div class="xl:!ml-64 px-5 pt-4">
+    <div class="xl:!ml-64 px-3 pt-4">
       <!-- header -->
       <div
-        class="flex items-center py-3 bg-base-100 mb-4 rounded px-4 sticky top-0 z-10 shadow"
+        class="flex items-center py-3 bg-base-100 mb-4 rounded px-4 sticky top-0 z-10"
       >
         <div
           class="text-2xl pr-3 cursor-pointer xl:!hidden"
