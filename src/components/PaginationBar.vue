@@ -14,8 +14,8 @@ const pages = computed(() => {
     if (total > 0 && props.limit && total > props.limit) {
         let page = 0
         while (true) {
-            if (page * props.limit > total) break
             page += 1
+            if (page * props.limit > total) break
             if (total / props.limit > 10 && page > showSize && page < (total / props.limit - showSize + 1)) {
                 if (!(page >= current.value - 1 && page <= current.value + 1)) {
                     continue
@@ -37,7 +37,7 @@ function gotoPage(pageNum: number) {
 
 </script>
 <template>
-    <div class="my-5">
+    <div class="my-5 text-center">
         <div v-if="total && limit" class="btn-group">
             <button v-for="{ page, color } in pages" :key="page"
                 class="btn bg-gray-100 text-gray-500 hover:text-white border-none dark:bg-gray-800 dark:text-white" :class="{

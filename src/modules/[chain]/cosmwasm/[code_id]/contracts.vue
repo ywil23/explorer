@@ -7,7 +7,7 @@ import type {
   PaginabledContracts,
 } from '../types';
 import DynamicComponent from '@/components/dynamic/DynamicComponent.vue';
-import { useBankStore, useBlockchain, useFormatter, useTxDialog } from '@/stores';
+import { useBlockchain, useFormatter, useTxDialog } from '@/stores';
 import PaginationBar from '@/components/PaginationBar.vue';
 import { PageRequest, type PaginatedBalances } from '@/types';
 
@@ -113,14 +113,14 @@ const result = ref('');
   <div>
     <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title truncate w-full">
-        Contract List of Code: {{ props.code_id }}
+        {{ $t('cosmwasm.contract_list_code') }}: {{ props.code_id }}
       </h2>
       <div class="overflow-x-auto">
         <table class="table table-compact w-full mt-4">
           <thead>
             <tr>
-              <th style="position: relative; z-index: 2">Contract List</th>
-              <th>Actions</th>
+              <th style="position: relative; z-index: 2">{{ $t('cosmwasm.contract_list') }}</th>
+              <th>{{ $t('account.action') }}</th>
             </tr>
           </thead>
           <tbody>
@@ -135,35 +135,41 @@ const result = ref('');
                   @click="showInfo(v)"
                   for="modal-contract-detail"
                   class="btn btn-primary btn-xs text-xs mr-2"
-                  >Contract</label
+                  >{{ $t('cosmwasm.btn_contract') }}</label
                 >
                 <label
                   @click="showFunds(v)"
                   for="modal-contract-funds"
                   class="btn btn-primary btn-xs text-xs mr-2"
-                  >Funds</label
+                  >{{ $t('cosmwasm.btn_funds') }}</label
                 >
                 <label
                   class="btn btn-primary btn-xs text-xs mr-2"
                   for="modal-contract-states"
                   @click="showState(v)"
                 >
-                  States
+                {{ $t('cosmwasm.btn_states') }}
                 </label>
                 <label
                   for="modal-contract-query"
                   class="btn btn-primary btn-xs text-xs mr-2"
                   @click="showQuery(v)"
                 >
-                  Query
+                {{ $t('cosmwasm.btn_query') }}
                 </label>
                 <label
                   for="wasm_execute_contract"
-                  class="btn btn-primary btn-xs text-xs"
+                  class="btn btn-primary btn-xs text-xs mr-2"
                   @click="dialog.open('wasm_execute_contract', { contract: v })"
                 >
-                  Execute
+                {{ $t('cosmwasm.btn_execute') }}
                 </label>
+                <RouterLink
+                  :to="`transactions?contract=${v}`"
+                  class="btn btn-primary btn-xs text-xs"
+                >
+                {{ $t('cosmwasm.btn_transactions') }}
+                </RouterLink>
               </td>
             </tr>
           </tbody>
@@ -182,7 +188,7 @@ const result = ref('');
                 codeId: props.code_id,
               })
             "
-            >Instantiate Contract</label
+            >{{ $t('cosmwasm.instantiate_contract') }}</label
           >
         </div>
       </div>
@@ -193,7 +199,7 @@ const result = ref('');
       <label class="modal-box !w-11/12 !max-w-5xl relative p-2" for="">
         <div>
           <div class="flex items-center justify-between px-3 pt-2">
-            <div class="text-lg">Contract Detail</div>
+            <div class="text-lg">{{ $t('cosmwasm.contract_detail') }}</div>
             <label
               @click="infoDialog = false"
               for="modal-contract-detail"
@@ -213,7 +219,7 @@ const result = ref('');
       <label class="modal-box relative p-2" for="">
         <div>
           <div class="flex items-center justify-between px-3 pt-2">
-            <div class="text-lg">Contract Balances</div>
+            <div class="text-lg">{{ $t('cosmwasm.contract_balances') }}</div>
             <label
               for="modal-contract-funds"
               class="btn btn-sm btn-circle"
@@ -224,7 +230,7 @@ const result = ref('');
             <li v-for="b in balances.balances" >
               <a class="flex justify-between"><span>{{ format.formatToken(b) }}</span> {{ b.amount }} </a>
             </li>
-            <li v-if="balances.pagination?.total === '0'" class="my-10 text-center"> No Escrowed Assets</li>
+            <li v-if="balances.pagination?.total === '0'" class="my-10 text-center">{{ $t('cosmwasm.no_escrowed_assets') }}</li>
           </ul>
         </div>
       </label>
@@ -235,7 +241,7 @@ const result = ref('');
       <label class="modal-box !w-11/12 !max-w-5xl" for="">
         <div>
           <div class="flex items-center justify-between px-3 pt-2 mb-4">
-            <div class="text-lg">Contract States</div>
+            <div class="text-lg">{{ $t('cosmwasm.contract_states') }}</div>
             <label
               for="modal-contract-states"
               class="btn btn-sm btn-circle"
@@ -271,7 +277,7 @@ const result = ref('');
       <label class="modal-box !w-11/12 !max-w-5xl" for="">
         <div>
           <div class="flex items-center justify-between px-3 pt-2 mb-4">
-            <div class="text-lg font-semibold">Query Contract</div>
+            <div class="text-lg font-semibold">{{ $t('cosmwasm.query_contract') }}</div>
             <label
               for="modal-contract-query"
               class="btn btn-sm btn-circle"
@@ -315,7 +321,7 @@ const result = ref('');
                 class="btn btn-primary px-4 text-white"
                 @click="queryContract()"
               >
-                Query Contract
+              {{ $t('cosmwasm.query_contract') }}
               </button>
             </div>
           </div>

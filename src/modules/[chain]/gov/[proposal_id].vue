@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed } from '@vue/reactivity';
+import MdEditor from 'md-editor-v3';
 import ObjectElement from '@/components/dynamic/ObjectElement.vue';
 import {
   useBaseStore,
@@ -19,6 +20,7 @@ import { ref, reactive } from 'vue';
 import Countdown from '@/components/Countdown.vue';
 import PaginationBar from '@/components/PaginationBar.vue';
 import { fromBech32, toHex } from '@cosmjs/encoding';
+
 
 const props = defineProps(['proposal_id', 'chain']);
 const proposal = ref({} as GovProposal);
@@ -174,7 +176,7 @@ function pageload(p: number) {
     <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title flex flex-col md:!justify-between md:!flex-row">
         <p class="truncate w-full">
-          {{ proposal_id }}. {{ proposal.content?.title }}
+          {{ proposal_id }}. {{ proposal.title || proposal.content?.title }}
         </p>
         <div
           class="badge badge-ghost"
@@ -192,13 +194,20 @@ function pageload(p: number) {
       <div class="">
         <ObjectElement :value="proposal.content" />
       </div>
+      <div v-if="proposal.summary && !proposal.content?.description">
+        <MdEditor
+          :model-value="format.multiLine(proposal.summary)"
+          previewOnly
+          class="md-editor-recover"
+        ></MdEditor>
+      </div>
     </div>
     <!-- grid lg:!!grid-cols-3 auto-rows-max-->
     <!-- flex-col lg:!!flex-row flex -->
     <div class="gap-4 mb-4 grid lg:!!grid-cols-3 auto-rows-max">
       <!-- flex-1 -->
       <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow">
-        <h2 class="card-title mb-1">Tally</h2>
+        <h2 class="card-title mb-1">{{ $t('gov.tally') }}</h2>
         <div class="mb-1" v-for="(item, index) of processList" :key="index">
           <label class="block text-sm mb-1">{{ item.name }}</label>
           <div class="h-5 w-full relative">
@@ -225,32 +234,32 @@ function pageload(p: number) {
             for="vote"
             class="btn btn-primary float-right btn-sm mx-1"
             @click="dialog.open('vote', { proposal_id })"
-            >Vote</label
+            >{{ $t('gov.btn_vote') }}</label
           >
           <label
             for="deposit"
             class="btn btn-primary float-right btn-sm mx-1"
             @click="dialog.open('deposit', { proposal_id })"
-            >Deposit</label
+            >{{ $t('gov.btn_deposit') }}</label
           >
         </div>
       </div>
 
       <div class="bg-base-100 px-4 pt-3 pb-5 rounded shadow lg:!!col-span-2">
-        <h2 class="card-title">Timeline</h2>
+        <h2 class="card-title">{{ $t('gov.timeline') }}</h2>
 
         <div class="px-1">
           <div class="flex items-center mb-4 mt-2">
             <div class="w-2 h-2 rounded-full bg-error mr-3"></div>
             <div class="text-base flex-1 text-main">
-              Submited at: {{ format.toDay(proposal.submit_time) }}
+              {{ $t('gov.submit_at') }}: {{ format.toDay(proposal.submit_time) }}
             </div>
             <div class="text-sm">{{ shortTime(proposal.submit_time) }}</div>
           </div>
           <div class="flex items-center mb-4">
             <div class="w-2 h-2 rounded-full bg-primary mr-3"></div>
             <div class="text-base flex-1 text-main">
-              Deposited at:
+              {{ $t('gov.deposited_at') }}:
               {{
                 format.toDay(
                   proposal.status === 'PROPOSAL_STATUS_DEPOSIT_PERIOD'
@@ -273,7 +282,7 @@ function pageload(p: number) {
             <div class="flex items-center">
               <div class="w-2 h-2 rounded-full bg-yes mr-3"></div>
               <div class="text-base flex-1 text-main">
-                Voting start from {{ format.toDay(proposal.voting_start_time) }}
+                {{ $t('gov.vote_start_from') }} {{ format.toDay(proposal.voting_start_time) }}
               </div>
               <div class="text-sm">
                 {{ shortTime(proposal.voting_start_time) }}
@@ -287,14 +296,14 @@ function pageload(p: number) {
             <div class="flex items-center mb-1">
               <div class="w-2 h-2 rounded-full bg-success mr-3"></div>
               <div class="text-base flex-1 text-main">
-                Voting end {{ format.toDay(proposal.voting_end_time) }}
+                {{ $t('gov.vote_end') }} {{ format.toDay(proposal.voting_end_time) }}
               </div>
               <div class="text-sm">
                 {{ shortTime(proposal.voting_end_time) }}
               </div>
             </div>
             <div class="pl-5 text-sm">
-              Current Status: {{ proposal.status }}
+              {{ $t('gov.current_status') }}: {{ $t(`gov.proposal_statuses.${proposal.status}`) }}
             </div>
           </div>
 
@@ -307,7 +316,7 @@ function pageload(p: number) {
             <div class="flex items-center">
               <div class="w-2 h-2 rounded-full bg-warning mr-3"></div>
               <div class="text-base flex-1 text-main">
-                Upgrade Plan:
+                {{ $t('gov.upgrade_plan') }}:
                 <span v-if="Number(proposal.content?.plan?.height || '0') > 0">
                   (EST)</span
                 >
@@ -328,13 +337,14 @@ function pageload(p: number) {
     </div>
 
     <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
-      <h2 class="card-title">Votes</h2>
+      <h2 class="card-title">{{ $t('gov.votes') }}</h2>
       <div class="overflow-x-auto">
         <table class="table w-full table-zebra">
           <tbody>
             <tr v-for="(item, index) of votes" :key="index">
               <td class="py-2 text-sm">{{ showValidatorName(item.voter) }}</td>
               <td
+                v-if="item.option"
                 class="py-2 text-sm"
                 :class="{
                   'text-yes': item.option === 'VOTE_OPTION_YES',
@@ -342,6 +352,12 @@ function pageload(p: number) {
                 }"
               >
                 {{ String(item.option).replace('VOTE_OPTION_', '') }}
+              </td>
+              <td
+                v-if="item.options"
+                class="py-2 text-sm"
+              >
+                {{ item.options.map(x => `${x.option.replace('VOTE_OPTION_', '')}:${format.percent(x.weight)}`).join(', ') }}
               </td>
             </tr>
           </tbody>

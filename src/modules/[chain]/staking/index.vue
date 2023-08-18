@@ -2,7 +2,6 @@
 import {
     useBaseStore,
     useBlockchain,
-    useDistributionStore,
     useFormatter,
     useMintStore,
     useStakingStore,
@@ -120,7 +119,7 @@ const calculateRank = function (position: number) {
 
 function isFeatured(endpoints: string[], who?: {website?: string, moniker: string }) {
     if(!endpoints || !who) return false
-    return endpoints.findIndex(x => who.website && who.website?.substring(0, who.website?.lastIndexOf('.')).endsWith(x) || who?.moniker?.toLowerCase().search(x) > -1) > -1
+    return endpoints.findIndex(x => who.website && who.website?.substring(0, who.website?.lastIndexOf('.')).endsWith(x) || who?.moniker?.toLowerCase().search(x.toLowerCase()) > -1) > -1
 }
 
 const list = computed(() => {
@@ -197,7 +196,7 @@ loadAvatars();
             </span>
             <span>
                 <div class="font-bold">{{ format.percent(mintStore.inflation) }}</div>
-                <div class="text-xs">Infalation</div>
+                <div class="text-xs">{{ $t('staking.inflation') }}</div>
             </span>
         </div>
         <div class="flex">
@@ -209,7 +208,7 @@ loadAvatars();
             </span>
             <span>
                 <div class="font-bold">{{ formatSeconds(staking.params?.unbonding_time) }}</div>
-                <div class="text-xs">Unbonding Time</div>
+                <div class="text-xs">{{ $t('staking.unbonding_time') }}</div>
             </span>
         </div> 
         <div class="flex">
@@ -221,7 +220,7 @@ loadAvatars();
             </span>
             <span>
             <div class="font-bold">{{ format.percent(slashing.slash_fraction_double_sign) }}</div>
-            <div class="text-xs">Double Sign Slashing</div>
+            <div class="text-xs">{{ $t('staking.double_sign_slashing') }}</div>
             </span>
         </div> 
         <div class="flex">
@@ -233,7 +232,7 @@ loadAvatars();
             </span>
             <span>
             <div class="font-bold">{{ format.percent(slashing.slash_fraction_downtime) }}</div>
-            <div class="text-xs">Downtime Slashing</div>
+            <div class="text-xs">{{ $t('staking.downtime_slashing') }}</div>
             </span>
         </div>  
     </div>
@@ -245,19 +244,19 @@ loadAvatars();
                     class="tab text-gray-400"
                     :class="{ 'tab-active': tab === 'featured' }"
                     @click="tab = 'featured'"
-                    >Popular</a
+                    >{{ $t('staking.popular') }}</a
                 >
                 <a
                     class="tab text-gray-400"
                     :class="{ 'tab-active': tab === 'active' }"
                     @click="tab = 'active'"
-                    >Active</a
+                    >{{ $t('staking.active') }}</a
                 >
                 <a
                     class="tab text-gray-400"
                     :class="{ 'tab-active': tab === 'inactive' }"
                     @click="tab = 'inactive'"
-                    >Inactive</a
+                    >{{ $t('staking.inactive') }}</a
                 >
             </div>
 
@@ -273,15 +272,16 @@ loadAvatars();
                         <tr>
                             <th
                                 scope="col"
+                                class="uppercase"
                                 style="width: 3rem; position: relative"
                             >
-                                #
+                            {{ $t('staking.rank') }}    
                             </th>
-                            <th scope="col">VALIDATOR</th>
-                            <th scope="col" class="text-right">VOTING POWER</th>
-                            <th scope="col" class="text-right">24h CHANGES</th>
-                            <th scope="col" class="text-right">COMMISSION</th>
-                            <th scope="col" class="text-center">ACTIONS</th>
+                            <th scope="col" class="uppercase">{{ $t('staking.validator') }}</th>
+                            <th scope="col" class="text-right uppercase">{{ $t('staking.voting_power') }}</th>
+                            <th scope="col" class="text-right uppercase">{{ $t('staking.24h_changes') }}</th>
+                            <th scope="col" class="text-right uppercase">{{ $t('staking.commission') }}</th>
+                            <th scope="col" class="text-center uppercase">{{ $t('staking.actions') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -307,7 +307,7 @@ loadAvatars();
                             <td>
                                 <div
                                     class="flex items-center overflow-hidden"
-                                    style="max-width: 400px"
+                                    style="max-width: 300px"
                                 >
                                     <div
                                         class="avatar mr-4 relative w-8 h-8 rounded-full overflow-hidden"
@@ -331,7 +331,7 @@ loadAvatars();
                                     </div>
 
                                     <div class="flex flex-col">
-                                        <h6 class="text-sm text-primary dark:invert">
+                                        <span class="text-sm text-primary dark:invert whitespace-nowrap overflow-hidden">
                                             <RouterLink
                                                 :to="{
                                                     name: 'chain-staking-validator',
@@ -340,11 +340,11 @@ loadAvatars();
                                                             v.operator_address,
                                                     },
                                                 }"
-                                                class="font-weight-medium user-list-name"
+                                                class="font-weight-medium"
                                             >
                                                 {{ v.description?.moniker }}
                                             </RouterLink>
-                                        </h6>
+                                        </span>
                                         <span class="text-xs">{{
                                             v.description?.website ||
                                             v.description?.identity ||
@@ -357,7 +357,7 @@ loadAvatars();
                             <!-- 👉 Voting Power -->
                             <td class="text-right">
                                 <div class="flex flex-col">
-                                    <h6 class="text-sm font-weight-medium">
+                                    <h6 class="text-sm font-weight-medium whitespace-nowrap ">
                                         {{
                                             format.formatToken(
                                                 {
@@ -401,7 +401,7 @@ loadAvatars();
                                     v-if="v.jailed"
                                     class="badge badge-error gap-2 text-white"
                                 >
-                                    Jailed
+                                {{ $t('staking.jailed') }}
                                 </div>
                                 <label
                                     v-else-if="rank !== 'error'"
@@ -413,7 +413,7 @@ loadAvatars();
                                                 v.operator_address,
                                         })
                                     "
-                                    >Delegate</label
+                                    >{{ $t('account.btn_delegate') }}</label
                                 >
                             </td>
                         </tr>
@@ -429,7 +429,7 @@ loadAvatars();
                     <span
                         class="inset-x-0 inset-y-0 opacity-10 absolute bg-error"
                     ></span>
-                    Top 33%
+                    {{ $t('staking.top') }} 33%
                 </div>
                 <div
                     class="text-xs truncate relative py-2 px-4 rounded-md w-fit text-warning"
@@ -437,10 +437,10 @@ loadAvatars();
                     <span
                         class="inset-x-0 inset-y-0 opacity-10 absolute bg-warning"
                     ></span>
-                    Top 67%
+                    {{ $t('staking.top') }} 67%
                 </div>
                 <div class="text-xs hidden md:!block pl-2">
-                    Delegating to lower-rank validators will increase the overall security of the network
+                    {{ $t('staking.description') }}
                 </div>
             </div>
         </div>
