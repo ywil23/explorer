@@ -29,8 +29,11 @@ const unbondList = ref([] as Validator[]);
 const slashing =ref({} as SlashingParam)
 
 onMounted(() => {
+    staking.fetchUnbondingValdiators().then((res) => {
+        unbondList.value = res.concat(unbondList.value);
+    });
     staking.fetchInacitveValdiators().then((res) => {
-        unbondList.value = res;
+        unbondList.value = unbondList.value.concat(res);
     });
     chainStore.rpc.getSlashingParams().then(res => {
         slashing.value = res.params
@@ -404,7 +407,7 @@ loadAvatars();
                                 {{ $t('staking.jailed') }}
                                 </div>
                                 <label
-                                    v-else-if="rank !== 'error'"
+                                    v-else
                                     for="delegate"
                                     class="btn btn-xs btn-primary rounded-sm capitalize"
                                     @click="
