@@ -9,7 +9,7 @@
 
     ],
     "rpc": [
-        {"provider": "Nodestake", "address": "https://rpc.realio.nodestake.top"},
+        {"provider": "Nodestake", "address": "https://rpc.realio.nodestake.top/"},
         {"provider": "Indonode", "address": "https://rpc.realio.indonode.net"}
 
     ],
