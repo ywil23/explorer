@@ -1,0 +1,31 @@
+{
+    "chain_name": "chain4energy",
+    "registry_name": "chain4energy",
+    "api": [
+
+        {"provider": "Nodestake", "address": "https://api.c4e.nodestake.top"},
+        {"provider": "Indonode", "address": "https://api.c4e.indonode.net"}
+
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Nodestake", "address": "https://rpc.c4e.nodestake.top"},
+        {"provider": "Indonode", "address": "https://rpc.c4e.indonode.net"}
+
+
+    ],
+    "sdk_version": "0.45.9",
+    "coin_type": "118",
+    "min_tx_fee": "5000",
+    "addr_prefix": "c4e",
+    "logo": "/logos/c4e.png",
+    "assets": [{
+        "base": "c4e",
+        "symbol": "C4E",
+        "exponent": "18",
+        "coingecko_id": "c4e",
+        "logo": "/logos/c4e.png"
+    }]
+}

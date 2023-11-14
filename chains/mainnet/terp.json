@@ -1,0 +1,27 @@
+{
+    "chain_name": "terpnetwork",
+    "registry_name": "terpnetwork",
+    "api": [
+        {"provider": "Cosmos Directory", "address": "https://rest.cosmos.directory/terpnetworkt"}
+
+
+
+
+    ],
+    "rpc": [
+        {"provider": "Cosmos Directory", "address": "https://rpc.cosmos.directory/terpnetwork"}
+
+
+    ],
+    "sdk_version": "0.47.1",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "terp",
+    "logo": "/logos/terp.jpg",
+    "assets": [{
+        "base": "uterp",
+        "symbol": "TERP",
+        "exponent": "6",
+        "logo": "/logos/terp.jpg"
+    }]
+}

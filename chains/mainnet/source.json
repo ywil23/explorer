@@ -1,0 +1,30 @@
+{
+    "chain_name": "source",
+    "registry_name": "source",
+    "api": [
+        {"provider": "Indonode", "address": "https://api.source.indonode.net"},
+        {"provider": "Nodestake", "address": "https://api.source.nodestake.top"}
+
+
+
+
+    ],
+    "rpc": [
+        {"provider": "Indonode", "address": "https://rpc.source.indonode.net"},
+        {"provider": "Nodestake", "address": "https://rpc.source.nodestake.top"}
+
+
+    ],
+    "sdk_version": "0.45.15",
+    "coin_type": "118",
+    "min_tx_fee": "0",
+    "addr_prefix": "source",
+    "logo": "/logos/source.png",
+    "assets": [
+      {
+        "base": "usource",
+        "symbol": "SOURCE",
+        "exponent": "6",
+        "logo": "/logos/source.png"
+    }]
+}

@@ -2,11 +2,13 @@
     "chain_name": "planq",
     "registry_name": "planq",
     "api": [
+        {"provider": "Indonode", "address": "https://api.planq.indonode.net"}, 
         {"provider": "Cosmos Directory", "address": "https://rest.cosmos.directory/planq"},
         {"provider": "Nodestake", "address": "https://api.planq.nodestake.top"}
 
     ],
     "rpc": [
+        {"provider": "Indonode", "address": "https://rpc.planq.indonode.net"}, 
         {"provider": "Cosmos Directory", "address": "https://rpc.cosmos.directory/planq"}, 
         {"provider": "Nodestake", "address": "https://rpc.planq.nodestake.top"}
     ],

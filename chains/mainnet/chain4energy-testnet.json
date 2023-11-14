@@ -1,0 +1,31 @@
+{
+    "chain_name": "c4e-testnet",
+    "registry_name": "c4e-testnet",
+    "api": [
+
+        {"provider": "Nodestake", "address": "https://api-t.c4e.nodestake.top"},
+        {"provider": "Indonode", "address": "https://api-t.c4e.indonode.net"}
+
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Nodestake", "address": "https://rpc-t.c4e.nodestake.top"},
+        {"provider": "Indonode", "address": "https://rpc-t.c4e.indonode.net"}
+
+
+    ],
+    "sdk_version": "0.46.10",
+    "coin_type": "118",
+    "min_tx_fee": "5000",
+    "addr_prefix": "c4e",
+    "logo": "/logos/c4e.png",
+    "assets": [{
+        "base": "c4e",
+        "symbol": "C4E",
+        "exponent": "18",
+        "coingecko_id": "c4e",
+        "logo": "/logos/c4e.png"
+    }]
+}
