@@ -4,7 +4,7 @@
     "api": [
 
         {"provider": "Nodestake", "address": "https://api-t.c4e.nodestake.top"},
-        {"provider": "Indonode", "address": "https://api-t.c4e.indonode.net"}
+        {"provider": "Indonode", "address": "https://api.c4e-t.indonode.net"}
 
 
 
@@ -12,7 +12,7 @@
     "rpc": [
 
         {"provider": "Nodestake", "address": "https://rpc-t.c4e.nodestake.top"},
-        {"provider": "Indonode", "address": "https://rpc-t.c4e.indonode.net"}
+        {"provider": "Indonode", "address": "https://rpc.c4e-t.indonode.net"}
 
 
     ],

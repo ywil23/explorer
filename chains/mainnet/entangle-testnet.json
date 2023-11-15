@@ -3,12 +3,12 @@
     "registry_name": "entangle-testnet",
     "api": [
 
-        {"provider": "Indonode", "address": "https://api-t.entangle.indonode.net"}
+        {"provider": "Indonode", "address": "https://api.entangle-t.indonode.net"}
 
 
     ],
     "rpc": [
-        {"provider": "Indonode", "address": "https://rpc-t.entangle.indonode.net"}
+        {"provider": "Indonode", "address": "https://rpc.entangle-t.indonode.net"}
     ],
     "sdk_version": "0.46.12",
     "coin_type": "118",

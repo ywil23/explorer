@@ -8,7 +8,7 @@
     ],
     "rpc": [
         {"provider": "Kjnodes", "address": "https://elys-testnet.rpc.kjnodes.com"},
-        {"provider": "Indonode", "address": "https://api-t.elys.indonode.net"}
+        {"provider": "Indonode", "address": "https://api.elys-t.indonode.net"}
     ],
     "sdk_version": "0.46.7",
     "coin_type": "118",

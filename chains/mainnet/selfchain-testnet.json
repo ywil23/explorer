@@ -3,14 +3,14 @@
     "registry_name": "selfchain-testnet",
     "api": [
         {"provider": "Nodestake", "address": "https://api-t.self.nodestake.top"},
-        {"provider": "Indonode", "address": "https://api-t.selfchain.indonode.net"}
+        {"provider": "Indonode", "address": "https://api.selfchain-t.indonode.net"}
 
 
 
     ],
     "rpc": [
         {"provider": "Nodestake", "address": "https://rpc-t.self.nodestake.top"},
-        {"provider": "Indonode", "address": "https://rpc-t.selfchain.indonode.net"}
+        {"provider": "Indonode", "address": "https://rpc.selfchain-t.indonode.net"}
 
     ],
     "sdk_version": "0.46.7",

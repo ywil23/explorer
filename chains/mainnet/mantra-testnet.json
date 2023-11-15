@@ -3,7 +3,7 @@
     "registry_name": "mantra-testnet",
     "api": [
 
-        {"provider": "Indonode", "address": "https://api-t.mantra.indonode.net"},
+        {"provider": "Indonode", "address": "https://api.mantra-t.indonode.net"},
         {"provider": "Nodestake", "address": "https://api-t.mantra.nodestake.top"}
 
 
@@ -12,7 +12,7 @@
     ],
     "rpc": [
 
-        {"provider": "Indonode", "address": "https://rpc-t.mantra.indonode.net"},
+        {"provider": "Indonode", "address": "https://rpc.mantra-t.indonode.net"},
         {"provider": "Nodestake", "address": "https://rpc-t.mantra.nodestake.top"}
 
 
