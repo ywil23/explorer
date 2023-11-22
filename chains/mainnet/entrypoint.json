@@ -17,7 +17,7 @@
     "logo": "/logos/entrypoint.png",
     "assets": [
       {
-        "base": "entrypoint/vault/1",
+        "base": "uentry",
         "symbol": "ENTRY",
         "exponent": "6",
         "logo": "/logos/entrypoint.png"
