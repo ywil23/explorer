@@ -1,0 +1,25 @@
+{
+    "chain_name": "entrypoint-testnet",
+    "registry_name": "entrypoint-testnet",
+    "api": [
+
+        {"provider": "Indonode", "address": "https://api.entrypoint-t.indonode.net"}
+
+
+    ],
+    "rpc": [
+        {"provider": "Indonode", "address": "https://rpc.entrypoint-t.indonode.net"}
+    ],
+    "sdk_version": "0.47.4",
+    "coin_type": "118",
+    "min_tx_fee": "0",
+    "addr_prefix": "entrypoint",
+    "logo": "/logos/entrypoint.png",
+    "assets": [
+      {
+        "base": "entrypoint/vault/1",
+        "symbol": "ENTRY",
+        "exponent": "6",
+        "logo": "/logos/entrypoint.png"
+    }]
+}
