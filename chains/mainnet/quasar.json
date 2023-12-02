@@ -1,0 +1,28 @@
+{
+    "chain_name": "quasar",
+    "registry_name": "quasar",
+    "api": [
+        {"provider": "Kjnodes", "address": "https://quasar.api.kjnodes.com"},
+        {"provider": "Indonode", "address": "https://api.quasar.indonode.net"}
+
+
+
+    ],
+    "rpc": [
+        {"provider": "Kjnodes", "address": "https://quasar.rpc.kjnodes.com"},
+        {"provider": "Indonode", "address": "https://rpc.quasar.indonode.net"}
+
+    ],
+    "sdk_version": "0.45.16",
+    "coin_type": "118",
+    "min_tx_fee": "500",
+    "addr_prefix": "quasar",
+    "logo": "/logos/quasar.png",
+    "assets": [{
+        "base": "uqsr",
+        "symbol": "QUASAR",
+        "exponent": "6",
+        "coingecko_id": "quasar",
+        "logo": "/logos/quasar.png"
+    }]
+}
