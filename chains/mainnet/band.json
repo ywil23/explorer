@@ -22,6 +22,7 @@
         "base": "uband",
         "symbol": "BAND",
         "exponent": "6",
+        "coingecko_id": "band-protocol", 
         "logo": "/logos/band.png"
     }]
 }

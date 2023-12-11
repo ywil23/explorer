@@ -1,0 +1,31 @@
+{
+    "chain_name": "haqq",
+    "registry_name": "haqq",
+    "api": [
+        {"provider": "Indonode", "address": "https://api.haqq.indonode.net"},
+        {"provider": "Nodestake", "address": "https://api.haqq.nodestake.top"}
+
+
+
+
+    ],
+    "rpc": [
+        {"provider": "Indonode", "address": "https://rpc.haqq.indonode.net"},
+        {"provider": "Nodestake", "address": "https://rpc.haqq.nodestake.top"}
+
+
+    ],
+    "sdk_version": "0.46.13",
+    "coin_type": "118",
+    "min_tx_fee": "0",
+    "addr_prefix": "haqq",
+    "logo": "/logos/haqq.png",
+    "assets": [
+      {
+        "base": "uislm",
+        "symbol": "ISLM",
+        "exponent": "6",
+        "coingecko_id": "islamic-coin", 
+        "logo": "/logos/haqq.png"
+    }]
+}
