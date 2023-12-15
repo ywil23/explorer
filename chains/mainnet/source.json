@@ -24,7 +24,7 @@
       {
         "base": "usource",
         "symbol": "SOURCE",
-        "coingecko_id": "source-protocol",
+        "coingecko_id": "source",
         "exponent": "6",
         "logo": "/logos/source.png"
     }]
