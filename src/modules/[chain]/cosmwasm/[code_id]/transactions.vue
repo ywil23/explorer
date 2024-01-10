@@ -10,6 +10,11 @@ import { useRoute } from 'vue-router';
 import type { ContractInfo, PaginabledContractStates, PaginabledContracts } from '../types';
 import { post } from '@/libs';
 
+import { JsonViewer } from "vue3-json-viewer"
+// if you used v1.0.5 or latster ,you should add import "vue3-json-viewer/dist/index.css"
+import "vue3-json-viewer/dist/index.css";
+import WasmVerification from '@/components/WasmVerification.vue';
+
 const chainStore = useBlockchain();
 const baseStore = useBaseStore();
 const format = useFormatter();
@@ -39,9 +44,7 @@ onMounted(() => {
     chainStore.rpc.getTxs("?order_by=2&events=execute._contract_address='{address}'", { address }, page.value).then(res => {
         txs.value = res
     })
-    post("https://prod.neutron.compiler.welldonestudio.io/verification/neutron", {"contractAddress": address, "chainId": baseStore.latest?.block.header.chain_id}).then(res => {
-        console.log("verification:", res)
-    })
+
 })
 
 function pageload(pageNum: number) {
@@ -86,19 +89,19 @@ function queryContract() {
             wasmStore.wasmClient
                 .getWasmContractRawQuery(contractAddress, query.value)
                 .then((x) => {
-                    result.value = JSON.stringify(x);
+                    result.value = x;
                 })
                 .catch((err) => {
-                    result.value = JSON.stringify(err);
+                    result.value = err;
                 });
         } else {
             wasmStore.wasmClient
                 .getWasmContractSmartQuery(contractAddress, query.value)
                 .then((x) => {
-                    result.value = JSON.stringify(x);
+                    result.value = x;
                 })
                 .catch((err) => {
-                    result.value = JSON.stringify(err);
+                    result.value = err;
                 });
         }
     } catch (err) {
@@ -122,7 +125,7 @@ const radioContent = [
 
 const selectedRadio = ref('raw');
 const query = ref('');
-const result = ref('');
+const result = ref({});
 </script>
 <template>
     <div>
@@ -199,10 +202,7 @@ const result = ref('');
             <PaginationBar :limit="page.limit" :total="txs.pagination?.total" :callback="pageload" />
         </div>
 
-        <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
-            <h2 class="card-title truncate w-full mt-4">Verification</h2>
-            
-        </div>
+        <WasmVerification :contract="contractAddress"/>
 
         <div>
             <input type="checkbox" id="modal-contract-funds" class="modal-toggle" />
@@ -233,18 +233,9 @@ const result = ref('');
                             <label for="modal-contract-states" class="btn btn-sm btn-circle">✕</label>
                         </div>
                         <div class="overflow-auto">
-                            <table class="table table-compact w-full text-sm">
-                                <tr v-for="(v, index) in state.models" :key="index" class="hover">
-                                    <td class="" :data-tip="format.hexToString(v.key)">
-                                        <span class="font-bold">{{ format.hexToString(v.key) }}</span>
-                                    </td>
-                                    <td class="text-left w-3/4" :title="format.base64ToString(v.value)">
-                                        {{ format.base64ToString(v.value) }}
-                                    </td>
-                                </tr>
-                            </table>
+                            <JsonViewer :value="state.models?.map(v => ({key: format.hexToString(v.key), value: JSON.parse(format.base64ToString(v.value))}))||''" :theme="baseStore.theme||'dark'" style="background: transparent;" copyable boxed sort :expand-depth="5"/>
                             <PaginationBar :limit="pageRequest.limit" :total="state.pagination?.total"
-                                :callback="pageload" />
+                                :callback="pageloadState" />
                         </div>
                     </div>
                 </label>
@@ -279,8 +270,9 @@ const result = ref('');
                                 </div>
                                 <textarea v-model="query" placeholder="Query String, {}" label="Query String"
                                     class="my-2 textarea textarea-bordered w-full" />
-                                <textarea v-model="result" readonly placeholder="Query Result" label="Result"
-                                    class="textarea textarea-bordered w-full" />
+                                
+                                <JsonViewer :value="result" :theme="baseStore.theme" style="background: transparent;" copyable boxed sort :expand-depth="5"/>
+
                             </div>
                             <div class="mt-4 mb-4 text-center">
                                 <button class="btn btn-primary px-4 text-white" @click="queryContract()">

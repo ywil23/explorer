@@ -21,7 +21,7 @@ export class BaseRestClient<R extends AbstractRegistry> {
     this.registry = registry;
   }
   async request<T>(request: Request<T>, args: Record<string, any>, query = '') {
-    let url = `${this.endpoint}${request.url}${query}`;
+    let url = `${request.url.startsWith("http")?'':this.endpoint}${request.url}${query}`;
     Object.keys(args).forEach((k) => {
       url = url.replace(`{${k}}`, args[k] || '');
     });
@@ -56,7 +56,7 @@ export class CosmosRestClient extends BaseRestClient<RequestRegistry> {
       req = findApiProfileByChain(chain.chainName)
       // if not found. try sdk version
       if(!req && chain.versions?.cosmosSdk) {
-        req = findApiProfileBySDKVersion(chain.versions?.cosmosSdk)
+        req = findApiProfileBySDKVersion(localStorage.getItem(`sdk_version_${chain.chainName}`) || chain.versions?.cosmosSdk)
       }
     }
     return new CosmosRestClient(endpoint, req || DEFAULT)
