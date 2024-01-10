@@ -24,9 +24,9 @@
     "addr_prefix": "art",
     "logo": "/logos/artela.jpg",
     "assets": [{
-        "base": "art",
+        "base": "uart",
         "symbol": "ART",
-        "exponent": "6",
+        "exponent": "18",
         "coingecko_id": "",
         "logo": "/logos/artela.jpg"
     }]
