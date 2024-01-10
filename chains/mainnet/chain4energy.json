@@ -24,7 +24,7 @@
     "assets": [{
         "base": "c4e",
         "symbol": "C4E",
-        "exponent": "18",
+        "exponent": "6",
         "coingecko_id": "c4e",
         "logo": "/logos/c4e.png"
     }]
