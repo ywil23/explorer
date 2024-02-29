@@ -19,12 +19,12 @@
     "coin_type": "118",
     "min_tx_fee": "5000",
     "addr_prefix": "mx",
-    "logo": "/logos/crossfi.jpq",
+    "logo": "/logos/crossfi.png",
     "assets": [{
         "base": "mpx",
         "symbol": "PX",
         "exponent": "18",
         "coingecko_id": "",
-        "logo": "/logos/crossfi.jpq"
+        "logo": "/logos/crossfi.png"
     }]
 }
