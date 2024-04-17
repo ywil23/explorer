@@ -4,7 +4,7 @@
     "api": [
 
         {"provider": "Indonode", "address": "https://api.mantra-t.indonode.net"},
-        {"provider": "Nodestake", "address": "https://api-t.mantra.nodestake.top"}
+        {"provider": "Mantra", "address": "https://api.hongbai.mantrachain.io"}
 
 
 
@@ -13,20 +13,20 @@
     "rpc": [
 
         {"provider": "Indonode", "address": "https://rpc.mantra-t.indonode.net"},
-        {"provider": "Nodestake", "address": "https://rpc-t.mantra.nodestake.top"}
+        {"provider": "Mantra", "address": "https://rpc.hongbai.mantrachain.io"}
 
 
 
     ],
     "sdk_version": "0.47.4",
     "coin_type": "118",
-    "min_tx_fee": "0",
+    "min_tx_fee": "0.0002",
     "addr_prefix": "mantra",
     "logo": "/logos/mantra.jpg",
     "assets": [
       {
-        "base": "uaum",
-        "symbol": "AUM",
+        "base": "uom",
+        "symbol": "OM",
         "exponent": "6",
         "logo": "/logos/mantra.jpg"
     }]
