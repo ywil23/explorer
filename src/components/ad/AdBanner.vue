@@ -25,7 +25,6 @@ onMounted(() => {
 
 </script>
 <template>
-  <div v-show="show" class="grid justify-items-center overflow-auto">
-    <div :id="id" class="mt-6"></div>
+  <div v-show="show" :id="id" :unit="unit" class="grid justify-items-center overflow-auto pt-4">
   </div>
 </template>
