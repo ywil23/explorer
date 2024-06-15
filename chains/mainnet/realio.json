@@ -13,14 +13,14 @@
         {"provider": "Indonode", "address": "https://rpc.realio.indonode.net"}
 
     ],
-    "sdk_version": "0.46.1",
+    "sdk_version": "0.46.11",
     "coin_type": "118",
     "min_tx_fee": "500",
     "addr_prefix": "realio",
     "logo": "/logos/realio.png",
     "assets": [{
         "base": "ario,arst",
-        "symbol": "RIO",
+        "symbol": "RIO,RST",
         "exponent": "18",
         "coingecko_id": "realio-network",
         "logo": "/logos/realio.png"

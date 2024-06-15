@@ -11,7 +11,7 @@
         {"provider": "Indonode", "address": "https://rpc.sge.indonode.net"},
         {"provider": "Cosmos Directory", "address": "https://rpc.cosmos.directory/sge"}
     ],
-    "sdk_version": "0.46.14",
+    "sdk_version": "0.47.8",
     "coin_type": "118",
     "min_tx_fee": "0.01",
     "addr_prefix": "sge",
