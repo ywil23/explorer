@@ -3,16 +3,14 @@
     "registry_name": "c4e-testnet",
     "api": [
 
-        {"provider": "Nodestake", "address": "https://api-t.c4e.nodestake.top"},
-        {"provider": "Indonode", "address": "https://api.c4e-t.indonode.net"}
+        {"provider": "C4E", "address": "https://lcd-testnet.c4e.io"}
 
 
 
     ],
     "rpc": [
 
-        {"provider": "Nodestake", "address": "https://rpc-t.c4e.nodestake.top"},
-        {"provider": "Indonode", "address": "https://rpc.c4e-t.indonode.net"}
+        {"provider": "C4E", "address": "https://rpc-testnet.c4e.io"}
 
 
     ],

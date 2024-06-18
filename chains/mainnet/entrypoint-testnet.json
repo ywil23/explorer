@@ -3,12 +3,12 @@
     "registry_name": "entrypoint-testnet",
     "api": [
 
-        {"provider": "Indonode", "address": "https://api.entrypoint-t.indonode.net"}
+        {"provider": "Entrypoint", "address": "https://testnet-rest.entrypoint.zone"}
 
 
     ],
     "rpc": [
-        {"provider": "Indonode", "address": "https://rpc.entrypoint-t.indonode.net"}
+        {"provider": "Entrypoint", "address": "https://testnet-rpc.entrypoint.zone"}
     ],
     "sdk_version": "0.47.4",
     "coin_type": "118",
