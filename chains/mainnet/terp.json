@@ -2,14 +2,14 @@
     "chain_name": "terpnetwork",
     "registry_name": "terpnetwork",
     "api": [
-        {"provider": "Cosmos Directory", "address": "https://rest.cosmos.directory/terpnetworkt"}
+        {"provider": "Itrocket", "address": "https://terp-mainnet-api.itrocket.net"}
 
 
 
 
     ],
     "rpc": [
-        {"provider": "Cosmos Directory", "address": "https://rpc.cosmos.directory/terpnetwork"}
+        {"provider": "Itrocket", "address": "https://terp-mainnet-rpc.itrocket.net"}
 
 
     ],
