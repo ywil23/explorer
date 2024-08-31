@@ -14,7 +14,7 @@
     "sdk_version": "0.47.10",
     "coin_type": "118",
     "min_tx_fee": "500",
-    "addr_prefix": "lava",
+    "addr_prefix": "lava@",
     "logo": "/logos/lava.jpg",
     "assets": [{
         "base": "ulava",
