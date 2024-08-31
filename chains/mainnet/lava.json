@@ -2,14 +2,14 @@
     "chain_name": "lava",
     "registry_name": "lava",
     "api": [
-        {"provider": "Indonode", "address": "https://api.quasar.indonode.net"},
+        {"provider": "Indonode", "address": "https://api.lava.indonode.net"},
         {"provider": "Lava Network", "address": "https://lava.rest.lava.build"}
 
 
 
     ],
     "rpc": [
-        {"provider": "Indonode", "address": "https://rpc.quasar.indonode.net"},
+        {"provider": "Indonode", "address": "https://rpc.lava.indonode.net"},
         {"provider": "Lava Network", "address": "https://lava.tendermintrpc.lava.build"}
 
     ],
