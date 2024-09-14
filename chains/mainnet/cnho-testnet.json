@@ -1,0 +1,32 @@
+{
+    "chain_name": "cnho-testnet",
+    "registry_name": "cnho-testnet",
+    "api": [
+
+        {"provider": "Indonode", "address": "https://api.cnho-t.indonode.net"},
+        {"provider": "WenMoonWenLambo", "address": "https://cnhostables_mainnet_api.chain.whenmoonwhenlambo.money"},
+        {"provider": "CNHO", "address": "https://api.cnho.io"}
+
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Indonode", "address": "https://rpc.cnho-t.indonode.net"},
+        {"provider": "WenMoonWenLambo", "address": "https://cnhostables_mainnet_rpc.chain.whenmoonwhenlambo.money"},
+        {"provider": "CNHO", "address": "https://rpc.cnho.io"}
+
+
+    ],
+    "sdk_version": "0.46.7",
+    "coin_type": "118",
+    "min_tx_fee": "5000",
+    "addr_prefix": "cnho",
+    "logo": "/logos/cnho.png",
+    "assets": [{
+        "base": "ucnho",
+        "symbol": "CNHO",
+        "exponent": "6",
+        "logo": "/logos/cnho.png"
+    }]
+}
