@@ -1,9 +1,9 @@
 {
-    "chain_name": "cnho-testnet",
-    "registry_name": "cnho-testnet",
+    "chain_name": "cnho",
+    "registry_name": "cnho",
     "api": [
 
-        {"provider": "Indonode", "address": "https://api.cnho-t.indonode.net"},
+        {"provider": "Indonode", "address": "https://api.cnho.indonode.net"},
         {"provider": "WenMoonWenLambo", "address": "https://cnhostables_mainnet_api.chain.whenmoonwhenlambo.money"},
         {"provider": "CNHO", "address": "https://api.cnho.io"}
 
@@ -12,7 +12,7 @@
     ],
     "rpc": [
 
-        {"provider": "Indonode", "address": "https://rpc.cnho-t.indonode.net"},
+        {"provider": "Indonode", "address": "https://rpc.cnho.indonode.net"},
         {"provider": "WenMoonWenLambo", "address": "https://cnhostables_mainnet_rpc.chain.whenmoonwhenlambo.money"},
         {"provider": "CNHO", "address": "https://rpc.cnho.io"}
 
