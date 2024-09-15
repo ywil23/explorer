@@ -1,12 +1,11 @@
 {
     "chain_name": "cnho",
-    "registry_name": "cnho",
+    "registry_name": "CNHO-Stables",
     "api": [
 
         {"provider": "Indonode", "address": "https://api.cnho.indonode.net"},
         {"provider": "WenMoonWenLambo", "address": "https://cnhostables_mainnet_api.chain.whenmoonwhenlambo.money"},
         {"provider": "CNHO", "address": "https://api.cnho.io"}
-
 
 
     ],
