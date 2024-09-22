@@ -2,12 +2,18 @@
     "chain_name": "shido",
     "registry_name": "shido",
     "api": [
-        {"provider": "Indonode", "address": "https://api.shido.indonode.net"}
+        {"provider": "Indonode", "address": "https://api.shido.indonode.net"},
+        {"provider": "256x25", "address": "https://shido-api.applejuice.256x25.tech"},
+        {"provider": "Mavnode", "address": "https://api-maverick.mavnode.io"}
+        
+        
 
     ],
     "rpc": [
 
-        {"provider": "Indonode", "address": "https://rpc.shido.indonode.net"}
+        {"provider": "Indonode", "address": "https://rpc.shido.indonode.net"},
+        {"provider": "256x25", "address": "https://shido-rpc.applejuice.256x25.tech"},
+        {"provider": "Mavnode", "address": "https://rpc-maverick.mavnode.io"}
     ],
     "sdk_version": "0.47.4",
     "coin_type": "118",
