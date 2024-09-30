@@ -3,14 +3,14 @@
     "registry_name": "empeiria-testnet",
     "api": [
 
-        {"provider": "Indonode", "address": "https://api.empe-t.indonode.net"}
+        {"provider": "Vinjan.Inc", "address": "https://api-empe.vinjan.xyz"}
 
 
 
     ],
     "rpc": [
 
-        {"provider": "Indonode", "address": "https://rpc.empe-t.indonode.net"}
+        {"provider": "Vinjan.Inc", "address": "https://api-empe.vinjan.xyz"}
 
 
     ],
