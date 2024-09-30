@@ -2,13 +2,13 @@
     "chain_name": "elys-testnet",
     "registry_name": "elys-testnet",
     "api": [
-        {"provider": "Kjnodes", "address": "https://elys-testnet.api.kjnodes.com"},
-        {"provider": "Indonode", "address": "https://api-t.elys.indonode.net"}
+        {"provider": "Vinjan.Inc", "address": "https://api-elys.vinjan.xyz"}
+       
 
     ],
     "rpc": [
-        {"provider": "Kjnodes", "address": "https://elys-testnet.rpc.kjnodes.com"},
-        {"provider": "Indonode", "address": "https://api.elys-t.indonode.net"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-elys.vinjan.xyz"}
+        
     ],
     "sdk_version": "0.46.7",
     "coin_type": "118",
