@@ -3,13 +3,13 @@
     "registry_name": "selfchain",
     "api": [
 
-        {"provider": "Indonode", "address": "https://api.selfchain.indonode.net"},
+        {"provider": "Vinjan.Inc", "address": "https://api-selfchain.vinjan.xyz"},
         {"provider": "Selfchain", "address": "https://api.selfchain.io/"}
 
 
     ],
     "rpc": [
-        {"provider": "Indonode", "address": "https://rpc.selfchain.indonode.net"},
+        {"provider": "Vinjan.Inc", "address": "https://rpc-selfchain.vinjan.xyz"},
         {"provider": "Nodestake", "address": "https://rpc.selfchain.io/"}
     ],
     "sdk_version": "0.47.10",
