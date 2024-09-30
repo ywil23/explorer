@@ -1,0 +1,26 @@
+{
+    "chain_name": "cosmoshub-testnet",
+    "registry_name": "cosmoshubhub-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://rest.seed-01.theta-testnet.polypore.xyz"}
+
+        
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://cosmos-testnet-rpc.polkachu.com"}
+
+        
+    ],
+    "sdk_version": "0.50.9-lsm",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "cosmos",
+    "logo": "/logos/cosmos.svg",
+    "assets": [{
+        "base": "uatom",
+        "symbol": "ATOM",
+        "exponent": "6",
+        "coingecko_id": "cosmos", 
+        "logo": "/logos/cosmos.svg"
+    }]
+}
