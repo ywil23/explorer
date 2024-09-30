@@ -2,13 +2,13 @@
     "chain_name": "sge",
     "registry_name": "sge",
     "api": [
-        {"provider": "Indonode", "address": "https://api.sge.indonode.net"},
+        {"provider": "Vinjan.Inc", "address": "https://api-sge.vinjan.xyz"},
         {"provider": "Cosmos Directory", "address": "https://rest.cosmos.directory/sge"}
 
     ],
     "rpc": [
 
-        {"provider": "Indonode", "address": "https://rpc.sge.indonode.net"},
+        {"provider": "Vinjan.Inc", "address": "https://rpc-sge.vinjan.xyz"},
         {"provider": "Cosmos Directory", "address": "https://rpc.cosmos.directory/sge"}
     ],
     "sdk_version": "0.47.8",
