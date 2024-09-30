@@ -1,6 +1,6 @@
 {
     "chain_name": "cosmoshub-testnet",
-    "registry_name": "cosmoshubhub-testnet",
+    "registry_name": "cosmoshub-testnet",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://rest.seed-01.theta-testnet.polypore.xyz"}
 
