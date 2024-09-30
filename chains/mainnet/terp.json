@@ -2,14 +2,14 @@
     "chain_name": "terpnetwork",
     "registry_name": "terpnetwork",
     "api": [
-        {"provider": "Itrocket", "address": "https://terp-mainnet-api.itrocket.net"}
+        {"provider": "Vinjan.Inc", "address": "https://api-terp.vinjan.xyz"}
 
 
 
 
     ],
     "rpc": [
-        {"provider": "Itrocket", "address": "https://terp-mainnet-rpc.itrocket.net"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-terp.vinjan.xyz"}
 
 
     ],
