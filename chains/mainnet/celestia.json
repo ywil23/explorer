@@ -2,7 +2,7 @@
     "chain_name": "celestia-testnet",
     "registry_name": "celestia-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://celestia-testnet-api.stake-town.com"}
+        {"provider": "Vinjan.Inc", "address": "https://celestia-testnet-api.polkachu.com"}
 
         
     ],
