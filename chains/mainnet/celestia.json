@@ -1,0 +1,26 @@
+{
+    "chain_name": "celestia-testnet",
+    "registry_name": "celestia-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://celestia-testnet-api.stake-town.com"}
+
+        
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://celestia-testnet-rpc.stake-town.com"}
+
+        
+    ],
+    "sdk_version": "0.46.16",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "celestia",
+    "logo": "/logos/celestia.jpg",
+    "assets": [{
+        "base": "utia",
+        "symbol": "TIA",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/celestia.jpg"
+    }]
+}
