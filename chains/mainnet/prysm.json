@@ -1,0 +1,31 @@
+{
+    "chain_name": "prysm-testnet",
+    "registry_name": "prysm-testnet",
+    "api": [
+
+        {"provider": "Vinjan.Inc", "address": "https://api-prysm.vinjan.xyz"},
+        {"provider": "Kleomedes", "address": "https://prysm-api-devnet.kleomedes.network"}
+
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Vinjan.Inc", "address": "https://rpc-prysm.vinjan.xyz"},
+        {"provider": "Kleomedes", "address": "https://prysm-rpc-devnet.kleomedes.network"}
+
+
+    ],
+    "sdk_version": "0.50.8",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "prysm",
+    "logo": "/logos/prysm.png",
+    "assets": [{
+        "base": "uprysm",
+        "symbol": "PRYSM",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/prysm.png"
+    }]
+}
