@@ -1,0 +1,26 @@
+{
+    "chain_name": "xion-testnet",
+    "registry_name": "xion-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://xion-testnet-api.polkachu.com/static/"}
+        
+    ],
+    "rpc": [
+
+        {"provider": "Vinjan.Inc", "address": "https://xion-testnet-rpc.polkachu.com/"}
+        
+    ],
+    "sdk_version": "0.50.10",
+    "coin_type": "118",
+    "min_tx_fee": "100",
+    "addr_prefix": "xion",
+    "logo": "/logos/xion.png",
+    "assets": [{
+        "base": "uxion",
+        "symbol": "XION",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/xion.png"
+    }]
+}
+  
