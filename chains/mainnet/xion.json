@@ -2,12 +2,12 @@
     "chain_name": "xion-testnet",
     "registry_name": "xion-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://testnet-xion-api.lavenderfive.com"}
+        {"provider": "Vinjan.Inc", "address": "https://api-xion.vinjan.xyz/"}
         
     ],
     "rpc": [
 
-        {"provider": "Vinjan.Inc", "address": "https://testnet-xion-rpc.lavenderfive.com"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-xion.vinjan.xyz/"}
         
     ],
     "sdk_version": "0.50.10",
