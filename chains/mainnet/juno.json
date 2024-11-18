@@ -2,13 +2,13 @@
     "chain_name": "juno-testnet",
     "registry_name": "juno-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://juno.api.t.stavr.tech"}
-
+        {"provider": "Vinjan.Inc", "address": "https://api-juno.vinjan.xyz"},
+        {"provider": "Polkachu", "address": "https://juno-testnet-api.polkachu.com"}
         
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://juno-testnet-rpc.polkachu.com"} 
-
+        {"provider": "Vinjan.Inc", "address": "https://rpc-juno.vinjan.xyz"}, 
+        {"provider": "Polkachu", "address": "https://juno-testnet-rpc.polkachu.com"}
         
     ],
     "sdk_version": "0.47.12",
