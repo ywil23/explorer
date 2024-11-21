@@ -1,0 +1,29 @@
+{
+    "chain_name": "kopi",
+    "registry_name": "kopi",
+    "api": [
+
+        {"provider": "Vinjan.Inc", "address": "https://api-kopid.vinjan.xyz"}
+
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Vinjan.Inc", "address": "https://rpc-kopid.vinjan.xyz"}
+
+
+    ],
+    "sdk_version": "0.50.7-5.",
+    "coin_type": "118",
+    "min_tx_fee": "500",
+    "addr_prefix": "kopi",
+    "logo": "/logos/kopi.png",
+    "assets": [{
+        "base": "ukopi",
+        "symbol": "XKP",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/kopi.png"
+    }]
+}
