@@ -3,8 +3,8 @@
     "registry_name": "kopi",
     "api": [
 
-        {"provider": "Vinjan.Inc", "address": "https://api-kopid.vinjan.xyz"}
-
+        {"provider": "Vinjan.Inc", "address": "https://api-kopid.vinjan.xyz"},
+        {"provider": "kopi-val-1", "address": "https://rest.kopi.money"} 
 
 
     ],
