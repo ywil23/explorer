@@ -2,7 +2,7 @@
     "chain_name": "terpnetwork",
     "registry_name": "terpnetwork",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-terp.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://terp-mainnet-api.itrocket.net"}
 
 
 
