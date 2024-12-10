@@ -1,0 +1,27 @@
+{
+    "chain_name": "aaron network",
+    "registry_name": "aaron network",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://api-aaronetwork.vinjan.xyz"},
+        {"provider": "Aaron Network", "address": "https://mainnet-api.aaronetwork.xyz"} 
+        
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://rpc-aaronetwork.vinjan.xyz"},
+        {"provider": "Aaron Network", "address": "https://mainnet-rpc.aaronetwork.xyz"}
+
+        
+    ],
+    "sdk_version": "0.50.10",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "aaron",
+    "logo": "/logos/aaron.png",
+    "assets": [{
+        "base": "uaaron",
+        "symbol": "AARON",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/aaron.png"
+    }]
+}
