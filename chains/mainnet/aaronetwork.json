@@ -1,6 +1,6 @@
 {
-    "chain_name": "aaron network",
-    "registry_name": "aaron network",
+    "chain_name": "aaronnetwork",
+    "registry_name": "aaronnetwork",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://api-aaronetwork.vinjan.xyz"},
         {"provider": "Aaron Network", "address": "https://mainnet-api.aaronetwork.xyz"} 
