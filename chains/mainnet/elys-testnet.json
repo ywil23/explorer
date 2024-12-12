@@ -1,6 +1,6 @@
 {
-    "chain_name": "elys-testnet",
-    "registry_name": "elys-testnet",
+    "chain_name": "elys",
+    "registry_name": "elys",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://api-elys.vinjan.xyz"}
        
@@ -10,7 +10,7 @@
         {"provider": "Vinjan.Inc", "address": "https://rpc-elys.vinjan.xyz"}
         
     ],
-    "sdk_version": "0.46.7",
+    "sdk_version": "0.50.9",
     "coin_type": "118",
     "min_tx_fee": "5000",
     "addr_prefix": "elys",
