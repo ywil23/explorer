@@ -2,12 +2,13 @@
     "chain_name": "elys",
     "registry_name": "elys",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-elys.vinjan.xyz"}
-       
+        {"provider": "Vinjan.Inc", "address": "https://api-elys.vinjan.xyz"},
+        {"provider": "Elys.Team", "address": "https://api.elys.network"}
 
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://rpc-elys.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-elys.vinjan.xyz"},
+        {"provider": "Elys.Team", "address": "https://rpc.elys.network"}
         
     ],
     "sdk_version": "0.50.9",
