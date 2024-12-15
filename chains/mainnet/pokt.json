@@ -1,0 +1,28 @@
+{
+    "chain_name": "pokt-testnet",
+    "registry_name": "pokt-testnet",
+    "api": [
+
+        {"provider": "Vinjan.Inc", "address": "https://api-pokt.vinjan.xyz"}
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Vinjan.Inc", "address": "https://rpc-pokt.vinjan.xyz"}
+
+
+    ],
+    "sdk_version": "0.50.9.",
+    "coin_type": "118",
+    "min_tx_fee": "500",
+    "addr_prefix": "pokt",
+    "logo": "/logos/pokt.png",
+    "assets": [{
+        "base": "upokt",
+        "symbol": "POKT",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/pokt.png"
+    }]
+}
