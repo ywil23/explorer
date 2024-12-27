@@ -1,0 +1,31 @@
+{
+    "chain_name": "zenrock",
+    "registry_name": "zenrock",
+    "api": [
+
+        {"provider": "Vinjan.Inc", "address": "https://api-zenrock.vinjan.xyz"},
+        {"provider": "AlxVoy", "address": "https://zenrock.api.m.anode.team"} 
+        
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Vinjan.Inc", "address": "https://rpc-zenrock.vinjan.xyz"},
+        {"provider": "AlxVoy", "address": "https://zenrock.rpc.m.anode.team"}
+
+
+    ],
+    "sdk_version": "0.50.10.",
+    "coin_type": "118",
+    "min_tx_fee": "500",
+    "addr_prefix": "zen",
+    "logo": "/logos/zenrock.png",
+    "assets": [{
+        "base": "urock",
+        "symbol": "ROCK",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/zenrock.png"
+    }]
+}
