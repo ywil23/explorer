@@ -2,18 +2,19 @@
     "chain_name": "realio",
     "registry_name": "realio",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-realio.vinjan.xyz"}
-        
+        {"provider": "Vinjan.Inc", "address": "https://api-realio.vinjan.xyz"},
+        {"provider": "Stavr", "address": " https://realio.api.m.stavr.tech"}
 
 
 
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://rpc-realio.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-realio.vinjan.xyz"},
+        {"provider": "Stavr", "address": " https://realio.rpc.m.stavr.tech"}
         
 
     ],
-    "sdk_version": "0.46.12",
+    "sdk_version": "0.50.11",
     "coin_type": "60",
     "min_tx_fee": "500000000000000",
     "addr_prefix": "realio",
