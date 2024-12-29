@@ -2,7 +2,8 @@
     "chain_name": "synternet",
     "registry_name": "synternet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-synternet.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-synternet.vinjan.xyz"},
+        {"provider": "Synternet", "address": "https://api.synternet.com"}
 
         
     ],
