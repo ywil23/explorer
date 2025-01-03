@@ -21,7 +21,7 @@
     "logo": "/logos/realio.png",
     "assets": [{
         "base": "stake",
-        "symbol": "RIO",
+        "symbol": "STAKE",
         "exponent": "6",
         "coingecko_id": "realio-network",
         "logo": "/logos/realio.png"
