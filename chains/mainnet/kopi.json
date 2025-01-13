@@ -3,7 +3,7 @@
     "registry_name": "kopi-testnet",
     "api": [
 
-        {"provider": "Vinjan.Inc", "address": "https://api-kopi-t.sychonix.com"}
+        {"provider": "Kopi", "address": "https://rest.test.kopi.money"}
 
 
 
