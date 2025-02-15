@@ -1,0 +1,27 @@
+{
+    "chain_name": "union-testnet",
+    "registry_name": "union-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://api-union.vinjan.xyz"},
+        {"provider": "Union", "address": "https://rest.testnet-9.union.build"}
+
+        
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://rpc-union.vinjan.xyz"} 
+
+        
+    ],
+    "sdk_version": "0.0.0-20241204135516-0f420992ae1e",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "union",
+    "logo": "/logos/union.png",
+    "assets": [{
+        "base": "muno",
+        "symbol": "UNO",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/union.png"
+    }]
+}
