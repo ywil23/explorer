@@ -2,12 +2,14 @@
     "chain_name": "kiichain-testnet",
     "registry_name": "kiichain-testnet",
     "api": [
+        {"provider": "KiiValidator", "address": "https://lcd.dos.sentry.testnet.v3.kiivalidator.com"},
         {"provider": "Vinjan.Inc", "address": "https://api-kiichain.vinjan.xyz"}
 
         
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://rpc-kiichain.vinjan.xyz"} 
+        {"provider": "KiiValidator", "address": "https://rpc.dos.sentry.testnet.v3.kiivalidator.com"},
+        {"provider": "Vinjan.Inc", "address": "https://rpc-kiichain.vinjan.xyz"}
 
         
     ],
