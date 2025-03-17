@@ -2,12 +2,12 @@
     "chain_name": "atomone",
     "registry_name": "atomone",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-atomone.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-atone.vinjan.xyz"}
 
         
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://rpc-atomone.vinjan.xyz"} 
+        {"provider": "Vinjan.Inc", "address": "https://rpc-atone.vinjan.xyz"} 
 
         
     ],
