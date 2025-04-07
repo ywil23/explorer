@@ -1,0 +1,26 @@
+{
+    "chain_name": "arkeo",
+    "registry_name": "arkeo",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://api-arkeo.vinjan.xyz"}
+
+        
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://rpc-arkeo.vinjan.xyz"} 
+
+        
+    ],
+    "sdk_version": "0.50.11",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "arkeo",
+    "logo": "/logos/arkeo.png",
+    "assets": [{
+        "base": "uarkeo",
+        "symbol": "ARKEO",
+        "exponent": "8",
+        "coingecko_id": "", 
+        "logo": "/logos/arkeo.png"
+    }]
+}
