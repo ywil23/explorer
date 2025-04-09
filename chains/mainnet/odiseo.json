@@ -1,0 +1,26 @@
+{
+    "chain_name": "odiseo-testnet",
+    "registry_name": "odiseo-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://api-odiseo.vinjan.xyz"}
+
+        
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://rpc-odiseo.vinjan.xyz"} 
+
+        
+    ],
+    "sdk_version": "0.50.8",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "odiseo",
+    "logo": "/logos/odiseo.png",
+    "assets": [{
+        "base": "uodis",
+        "symbol": "ODIS",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/odiseo.png"
+    }]
+}
