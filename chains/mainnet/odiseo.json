@@ -1,6 +1,6 @@
 {
-    "chain_name": "odiseo-testnet",
-    "registry_name": "odiseo-testnet",
+    "chain_name": "odiseo",
+    "registry_name": "odiseo",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://api-odiseo.vinjan.xyz"}
 
