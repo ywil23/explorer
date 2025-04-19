@@ -3,7 +3,8 @@
     "registry_name": "kopi-testnet",
     "api": [
 
-        {"provider": "Kopi", "address": "https://rest.test.kopi.money"}
+        {"provider": "Kopi", "address": "https://rest.test.kopi.money"},
+        {"provider": "StakerHouse", "address": "https://kopi-testnet-rest.stakerhouse.com"}
 
 
 
