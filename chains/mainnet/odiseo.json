@@ -2,7 +2,7 @@
     "chain_name": "odiseo",
     "registry_name": "odiseo",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-odiseo.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-odiseo.vinjan.xyz"},
         {"provider": "Sychonix", "address": "https://api-odiseo-t.sychonix.com"}
 
         
