@@ -14,14 +14,14 @@
         
     ],
     "sdk_version": "v0.50.13-0.20250319183239-53dea340efc7",
-    "coin_type": "118",
+    "coin_type": "60",
     "min_tx_fee": "1000",
     "addr_prefix": "kii",
     "logo": "/logos/kiichain.png",
     "assets": [{
         "base": "akii",
         "symbol": "KII",
-        "exponent": "6",
+        "exponent": "18",
         "coingecko_id": "", 
         "logo": "/logos/kiichain.png"
     }]
