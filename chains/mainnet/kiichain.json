@@ -1,6 +1,6 @@
 {
-    "chain_name": "Kii Testnet Oro",
-    "registry_name": "Kii Testnet Oro",
+    "chain_name": "kiichain-testnet",
+    "registry_name": "kiichain-testnet",
     "api": [
         {"provider": "KiiValidator", "address": "https://lcd.uno.sentry.testnet.v3.kiivalidator.com"},
         {"provider": "Vinjan.Inc", "address": "https://api-kiichain.vinjan.xyz"}
