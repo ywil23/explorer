@@ -17,7 +17,7 @@
     "coin_type": "60",
     "addr_prefix": "kii",
     "logo": "/logos/kiichain.png",
-    "assets": [
+    "assets": [{
         "base": "akii",
         "symbol": "KII",
         "exponent": "18",
@@ -27,8 +27,9 @@
                 "low": 80000000000,
                 "average": 80000000000,
                 "high": 80000000000
-        
-     ],    
+         }
+        }
+    ],   
     "features": [
         "eth-address-gen",
         "eth-key-sign",
