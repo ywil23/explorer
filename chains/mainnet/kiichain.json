@@ -23,13 +23,24 @@
         "exponent": "18",
         "coingecko_id": "kii", 
         "logo": "/logos/kiichain.png",
-        "gasPriceStep": 
+  }
+    ],
+    "feeCurrencies": [
+        {
+            "coinDenom": "Kii",
+            "coinMinimalDenom": "akii",
+            "coinDecimals": 18,
+            "coinGeckoId": "kii",
+            "gasPriceStep": {
                 "low": 80000000000,
                 "average": 80000000000,
                 "high": 80000000000
-        "features": 
+            }
+        }
+    ],
+    "features": [
         "eth-address-gen",
         "eth-key-sign",
         "eth-secp256k1-cosmos"
-  }]
-}
+    ]
+}     
