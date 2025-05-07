@@ -27,8 +27,6 @@
                 "low": 80000000000,
                 "average": 80000000000,
                 "high": 80000000000
-            
-    ],
     "features": [
         "eth-address-gen",
         "eth-key-sign",
