@@ -1,0 +1,29 @@
+{
+    "chain_name": "tacchain-testnet",
+    "registry_name": "tacchain-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://api-test.tacchain.vinjan.xyz"}
+       
+
+
+
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://rpc-test.tacchain.vinjan.xyz"}
+        
+        
+
+    ],
+    "sdk_version": "v0.50.13-0.20250319183239-53dea340efc7",
+    "coin_type": "60",
+    "min_tx_fee": "500000000000000",
+    "addr_prefix": "realio",
+    "logo": "/logos/tacchain.png",
+    "assets": [{
+        "base": "utac",
+        "symbol": "TAC",
+        "exponent": "18",
+        "coingecko_id": "",
+        "logo": "/logos/tacchain.png"
+    }]
+}
