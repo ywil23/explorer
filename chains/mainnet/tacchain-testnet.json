@@ -2,7 +2,8 @@
     "chain_name": "tacchain-testnet",
     "registry_name": "tacchain-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-test.tacchain.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-test.tacchain.vinjan.xyz"},
+        {"provider": "Polkachu", "address": "https://tacchain-testnet-api.polkachu.com"}
        
 
 
