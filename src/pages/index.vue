@@ -78,7 +78,7 @@ const chainStore = useBlockchain()
     </div>
 
     <div v-if="featured.length>0" class="text-center text-base mt-6 text-primary">
-      <h2 class="mb-6"> Featured Blockchains 🔥 </h2>
+      <h2 class="mb-6">  </h2>
     </div>
 
     <div v-if="featured.length>0"
