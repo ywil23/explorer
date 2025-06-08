@@ -253,7 +253,7 @@ dayjs()
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            Osmosis
+            
           </div>
         </a>
         <a
@@ -268,7 +268,7 @@ dayjs()
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            Celestia
+            
           </div>
         </a>
         <a
@@ -283,7 +283,7 @@ dayjs()
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            Becole
+            
           </div>
         </a>
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
