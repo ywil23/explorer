@@ -242,12 +242,12 @@ dayjs()
           {{ $t('module.sponsors') }}
         </div>
         <a
-          href="https://osmosis.zone"
+          href=""
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src="https://ping.pub/logos/osmosis.jpg"
+            src=""
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
@@ -257,12 +257,12 @@ dayjs()
           </div>
         </a>
         <a
-          href="https://celestia.org"
+          href=""
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src="https://ping.pub/logos/celestia.png"
+            src=""
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
@@ -272,12 +272,12 @@ dayjs()
           </div>
         </a>
         <a
-          href="https://becole.com"
+          href=""
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src="https://becole.com/static/logo/logo_becole.png"
+            src=""
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
