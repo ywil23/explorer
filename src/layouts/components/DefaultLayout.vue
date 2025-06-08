@@ -262,7 +262,7 @@ dayjs()
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src="https://ping.pub/logos/atomone.png"
+            src="https://ping.pub/logos/atone.png"
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
