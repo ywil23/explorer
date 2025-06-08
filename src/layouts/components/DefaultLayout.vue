@@ -268,7 +268,7 @@ dayjs()
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            Atomone
+            Atone
           </div>
         </a>
         <a
