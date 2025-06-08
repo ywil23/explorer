@@ -247,13 +247,13 @@ dayjs()
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src=""
+            src="https://ping.pub/logos/osmosis.jpg"
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            
+            Osmosis
           </div>
         </a>
         <a
@@ -262,13 +262,13 @@ dayjs()
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src=""
+            src="https://ping.pub/logos/atomone.png"
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            
+            Atomone
           </div>
         </a>
         <a
@@ -277,13 +277,13 @@ dayjs()
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#373f59]"
         >
           <img
-            src=""
+            src="https://ping.pub/logos/realio.png"
             class="w-6 h-6 rounded-full mr-3"
           />
           <div
             class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            
+            Realio
           </div>
         </a>
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
