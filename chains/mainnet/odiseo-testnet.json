@@ -3,7 +3,7 @@
     "registry_name": "odiseo-testnet",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://api-test.odiseo.vinjan.xyz"},
-        {"provider": "Sychonix", "address": "https://api-odiseo-t.sychonix.com"}
+        {"provider": "Nodes Hub", "address": "https://odiseo.test.api.nodeshub.online"}
 
         
     ],
