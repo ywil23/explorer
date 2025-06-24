@@ -1,0 +1,31 @@
+{
+    "chain_name": "symphony",
+    "registry_name": "symphony",
+    "api": [
+
+        {"provider": "Vinjan.Inc", "address": "https://api-symphony.vinjan.xyz"},
+        {"provider": "Nodeshub", "address": "https://symphony.api.nodeshub.online"},
+        {"provider": "Coinsspor", "address": "https://symp-api-mainnet.coinsspor.com"} 
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Vinjan.Inc", "address": "https://rpc-symphony.vinjan.xyz"}
+        
+
+
+    ],
+    "sdk_version": "v0.50.6-v26-osmo-2-symphony-3",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "symphony",
+    "logo": "/logos/symphony.png",
+    "assets": [{
+        "base": "note",
+        "symbol": "MLD",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/symphony.png"
+    }]
+}
