@@ -4,7 +4,7 @@
     "api": [
 
         {"provider": "Vinjan.Inc", "address": "https://api-symphonyd.vinjan.xyz"},
-        {"provider": "Kleomedes", "address": "https://symphony-api.kleomedes.network"}
+        {"provider": "Coinsspor", "address": "https://symphony-testnet-api.coinsspor.com"}
 
 
     ],
