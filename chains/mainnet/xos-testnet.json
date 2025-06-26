@@ -1,0 +1,30 @@
+{
+    "chain_name": "xos-testnet",
+    "registry_name": "xos-testnet",
+    "api": [
+        {"provider": "Vinjan.Inc", "address": "https://api-test.xosd.vinjan.xyz"}
+        
+       
+
+
+
+    ],
+    "rpc": [
+        {"provider": "Vinjan.Inc", "address": "https://rpc-test.xosd.vinjan.xyz"}
+        
+        
+
+    ],
+    "sdk_version": "v0.50.13-0.20250319183239-53dea340efc7",
+    "coin_type": "60",
+    "min_tx_fee": "80000000000",
+    "addr_prefix": "cosmos",
+    "logo": "/logos/xos.png",
+    "assets": [{
+        "base": "axos",
+        "symbol": "XOS",
+        "exponent": "18",
+        "coingecko_id": "",
+        "logo": "/logos/xos.png"
+    }]
+}
