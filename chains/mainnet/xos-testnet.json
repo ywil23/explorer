@@ -2,7 +2,7 @@
     "chain_name": "xos-testnet",
     "registry_name": "xos-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-test.xosd.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-test.xos.vinjan.xyz"}
         
        
 
@@ -10,7 +10,7 @@
 
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://rpc-test.xosd.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-test.xos.vinjan.xyz"}
         
         
 
