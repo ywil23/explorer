@@ -1,6 +1,6 @@
 {
-    "chain_name": "symphony-testnet-4",
-    "registry_name": "symphony-testnet-4",
+    "chain_name": "symphony-testnet",
+    "registry_name": "symphony-testnet",
     "api": [
 
         {"provider": "Vinjan.Inc", "address": "https://api-symphonyd.vinjan.xyz"},
