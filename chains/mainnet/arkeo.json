@@ -20,7 +20,7 @@
         "base": "uarkeo",
         "symbol": "ARKEO",
         "exponent": "8",
-        "coingecko_id": "", 
+        "coingecko_id": "arkeo", 
         "logo": "/logos/arkeo.png"
     }]
 }
