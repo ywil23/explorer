@@ -2,7 +2,8 @@
     "chain_name": "arkeo",
     "registry_name": "arkeo",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-arkeo.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-arkeo.vinjan.xyz"},
+        {"provider": "Arkeo", "address": "https://rest-seed.arkeo.network"}
 
         
     ],
