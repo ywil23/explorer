@@ -2,7 +2,9 @@
     "chain_name": "atomone",
     "registry_name": "atomone",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://api-atone.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://api-atone.vinjan.xyz"},
+        {"provider": "AllInBits", "address": "https://atomone-api.allinbits.com"},
+        {"provider": "ITRocket", "address": "https://atomone-mainnet-api.itrocket.net"}
 
         
     ],
