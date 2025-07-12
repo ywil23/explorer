@@ -11,7 +11,7 @@
     ],
     "rpc": [
 
-        {"provider": "Vinjan.Inc", "address": "https://rpc-main-symphony.vinjan.xyz"}
+        {"provider": "Konsortech", "address": "https://mainnet-symphony-rpc.konsortech.xyz"}
         
 
 
