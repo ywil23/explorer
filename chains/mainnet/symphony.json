@@ -5,7 +5,7 @@
 
         {"provider": "Vinjan.Inc", "address": "https://api-main-symphony.vinjan.xyz"},
         {"provider": "Nodeshub", "address": "https://symphony.api.nodeshub.online"},
-        {"provider": "Coinsspor", "address": "https://symp-api-mainnet.coinsspor.com"} 
+        {"provider": "Konsortech", "address": "https://mainnet-symphony-api.konsortech.xyz"} 
 
 
     ],
