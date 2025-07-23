@@ -2,12 +2,12 @@
     "chain_name": "structs-testnet",
     "registry_name": "structs-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://testnet-api.structs.chaintools.tech"}
+        {"provider": "Moonbridge", "address": "https://structs-testnet-api.moonbridge.org"}
 
         
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://structs-test.rpc.moonbridge.team"} 
+        {"provider": "Moonbridge", "address": "https://structs-testnet-rpc.moonbridge.org"} 
 
         
     ],
