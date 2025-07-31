@@ -3,12 +3,15 @@
     "registry_name": "lumera-testnet",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://api-test.lumera.vinjan.xyz"},
-        {"provider": "Polkachu", "address": "https://lumera-testnet-api.polkachu.com"}
+        {"provider": "Polkachu", "address": "https://lumera-testnet-api.polkachu.com"},
+        {"provider": "Lumera", "address": "https://lcd.testnet.lumera.io"}
 
         
     ],
     "rpc": [
-        {"provider": "Vinjan.Inc", "address": "https://rpc-test.lumera.vinjan.xyz"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-test.lumera.vinjan.xyz"},
+        {"provider": "Lumera", "address": "https://rpc.testnet.lumera.io"}
+
 
         
     ],
