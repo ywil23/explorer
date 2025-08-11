@@ -20,6 +20,7 @@
     "min_tx_fee": "25000000000",
     "addr_prefix": "tac",
     "logo": "/logos/tacchain.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "utac",
         "symbol": "TAC",
