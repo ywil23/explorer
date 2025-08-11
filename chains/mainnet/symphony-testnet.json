@@ -10,8 +10,8 @@
     ],
     "rpc": [
 
-        {"provider": "Vinjan.Inc", "address": "https://rpc-symphonyd.vinjan.xyz"},
-        {"provider": "Kleomedes", "address": "https://symphony-rpc.kleomedes.network"}
+        {"provider": "Vinjan.Inc", "address": "https://rpc-symphonyd.vinjan.xyz"}
+       
 
 
     ],
@@ -20,6 +20,7 @@
     "min_tx_fee": "800",
     "addr_prefix": "symphony",
     "logo": "/logos/symphony.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "note",
         "symbol": "MLD",
