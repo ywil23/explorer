@@ -17,6 +17,7 @@
     "coin_type": "60",
     "addr_prefix": "kii",
     "logo": "/logos/kiichain.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "akii",
         "symbol": "KII",
