@@ -17,6 +17,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "axone",
     "logo": "/logos/axone.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "uaxone",
         "symbol": "AXONE",
