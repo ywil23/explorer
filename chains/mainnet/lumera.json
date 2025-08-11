@@ -17,6 +17,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "lumera",
     "logo": "/logos/lumera.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "ulume",
         "symbol": "LUME",
