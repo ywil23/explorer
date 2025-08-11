@@ -2,7 +2,8 @@
     "chain_name": "osmosis-testnet",
     "registry_name": "osmosis-testnet",
     "api": [
-        {"provider": "Vinjan.Inc", "address": "https://lcd.osmotest5.osmosis.zone"}
+        {"provider": "OsmosisZone", "address": "https://lcd.osmotest5.osmosis.zone"},
+        {"provider": "Polkachu", "address": "https://osmosis-testnet-api.polkachu.com"}
 
         
     ],
@@ -16,6 +17,7 @@
     "min_tx_fee": "800",
     "addr_prefix": "osmo",
     "logo": "/logos/osmosis.jpg",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "uosmo",
         "symbol": "OSMO",
