@@ -21,6 +21,7 @@
     "min_tx_fee": "500",
     "addr_prefix": "zen",
     "logo": "/logos/zenrock.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "urock",
         "symbol": "ROCK",
