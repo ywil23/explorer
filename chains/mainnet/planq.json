@@ -17,6 +17,7 @@
     "min_tx_fee": "000000000000000",
     "addr_prefix": "planq",
     "logo": "/logos/planq.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "aplanq",
         "symbol": "PLANQ",
