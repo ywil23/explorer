@@ -19,6 +19,7 @@
     "min_tx_fee": "500000000000000",
     "addr_prefix": "realio",
     "logo": "/logos/realio.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "stake",
         "symbol": "STAKE",
