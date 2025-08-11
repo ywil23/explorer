@@ -18,6 +18,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "atone",
     "logo": "/logos/atone.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "uatone",
         "symbol": "ATONE",
