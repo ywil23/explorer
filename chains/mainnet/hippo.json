@@ -17,6 +17,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "hippo",
     "logo": "/logos/hippo.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "ahp",
         "symbol": "HP",
