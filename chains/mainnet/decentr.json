@@ -16,6 +16,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "decentr",
     "logo": "/logos/decentr.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "udec",
         "symbol": "DEC",
