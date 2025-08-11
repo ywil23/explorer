@@ -19,6 +19,7 @@
     "min_tx_fee": "500",
     "addr_prefix": "kopi",
     "logo": "/logos/kopi.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "ukopi",
         "symbol": "XKP",
