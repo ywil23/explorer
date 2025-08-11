@@ -16,6 +16,7 @@
     "min_tx_fee": "5000",
     "addr_prefix": "elys",
     "logo": "/logos/elys.png",
+    "theme_color": "#812cd6",
     "assets": [
       {
         "base": "uelys",
