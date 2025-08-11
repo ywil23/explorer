@@ -20,6 +20,7 @@
     "min_tx_fee": "80000000000",
     "addr_prefix": "cosmos",
     "logo": "/logos/xos.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "axos",
         "symbol": "XOS",
