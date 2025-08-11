@@ -16,6 +16,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "air",
     "logo": "/logos/airchain.png",
+    "theme_color": "#812cd6",
     "assets": [{
         "base": "amf",
         "symbol": "AMF",
