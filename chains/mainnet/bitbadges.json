@@ -3,8 +3,9 @@
     "registry_name": "bitbadges",
     "api": [
         {"provider": "Vinjan.Inc", "address": "https://api-bitbadges.vinjan.xyz"},
-        {"provider": "BitBadges", "address": "https://lcd.bitbadges.io"},
-        {"provider": "Nodestake", "address": "https://api.bitbadges.nodestake.org"}
+        {"provider": "BitBadges", "address": "https://node.bitbadges.io/api"},
+        {"provider": "Nodestake", "address": "https://api.bitbadges.nodestake.org"},
+        {"provider": "WhenMoonWhenLambo", "address": "https://bitbadges_mainnet_api.chain.whenmoonwhenlambo.money"}
 
         
     ],
