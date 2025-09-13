@@ -1,0 +1,32 @@
+{
+    "chain_name": "sunrise",
+    "registry_name": "sunrise",
+    "api": [
+
+        {"provider": "Polkachu", "address": "https://sunrise-api.polkachu.com"}
+        
+
+
+    ],
+    "rpc": [
+
+        {"provider": "Polkachu", "address": "https://sunrise-rpc.polkachu.com"}
+        
+        
+
+
+    ],
+    "sdk_version": "v0.53.2",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "sunrise",
+    "logo": "/logos/sunrise.png",
+    "theme_color": "#812cd6",
+    "assets": [{
+        "base": "uvrise",
+        "symbol": "VRISE",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/sunrise.png"
+    }]
+}
