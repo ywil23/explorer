@@ -3,14 +3,16 @@
     "registry_name": "sunrise",
     "api": [
 
-        {"provider": "Polkachu", "address": "https://sunrise-api.polkachu.com"}
+        {"provider": "Polkachu", "address": "https://sunrise-api.polkachu.com"},
+        {"provider": "Vinjan.Inc", "address": "https://api-sunrise.vinjan.xyz"}
         
 
 
     ],
     "rpc": [
 
-        {"provider": "Polkachu", "address": "https://sunrise-rpc.polkachu.com"}
+        {"provider": "Polkachu", "address": "https://sunrise-rpc.polkachu.com"},
+        {"provider": "Vinjan.Inc", "address": "https://rpc-sunrise.vinjan.xyz"}
         
         
 
