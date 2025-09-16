@@ -16,7 +16,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "dh",
     "logo": "/logos/dhealth.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#e00b0b",
     "assets": [{
         "base": "udhp",
         "symbol": "DHP",
