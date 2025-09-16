@@ -16,7 +16,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "noble",
     "logo": "/logos/noble.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#053ab8",
     "assets": [
       {
         "base": "uusdc",
