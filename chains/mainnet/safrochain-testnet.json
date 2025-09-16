@@ -17,7 +17,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "addr_safro",
     "logo": "/logos/safro.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#099c04",
     "assets": [{
         "base": "usafro",
         "symbol": "SAF",
