@@ -21,6 +21,7 @@
     "min_tx_fee": "800",
     "addr_prefix": "prysm",
     "logo": "/logos/prysm.png",
+    "theme_color": "#099c04",
     "assets": [{
         "base": "uprysm",
         "symbol": "PRYSM",
