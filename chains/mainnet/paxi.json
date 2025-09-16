@@ -18,7 +18,7 @@
     "min_tx_fee": "0.025",
     "addr_prefix": "paxi",
     "logo": "/logos/paxi.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#e00b0b",
     "assets": [{
         "base": "upaxi",
         "symbol": "PAXI",
