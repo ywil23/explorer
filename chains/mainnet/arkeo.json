@@ -17,7 +17,7 @@
     "min_tx_fee": "1000",
     "addr_prefix": "arkeo",
     "logo": "/logos/arkeo.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#e00b0b",
     "assets": [{
         "base": "uarkeo",
         "symbol": "ARKEO",
