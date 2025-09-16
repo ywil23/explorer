@@ -20,7 +20,7 @@
     "min_tx_fee": "800",
     "addr_prefix": "symphony",
     "logo": "/logos/symphony.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#099c04",
     "assets": [{
         "base": "note",
         "symbol": "MLD",
