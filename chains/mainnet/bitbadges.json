@@ -19,7 +19,7 @@
     "min_tx_fee": "0.025",
     "addr_prefix": "bb",
     "logo": "/logos/bitbadges.png",
-    "theme_color": "#812cd6",
+    "theme_color": "#e00b0b",
     "assets": [{
         "base": "ubadge",
         "symbol": "BADGE",
