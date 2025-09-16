@@ -16,7 +16,7 @@
     "min_tx_fee": "800",
     "addr_prefix": "cosmos",
     "logo": "/logos/cosmos.svg",
-    "theme_color": "#f0d806",
+    "theme_color": "#ed4705",
     "assets": [{
         "base": "uatom",
         "symbol": "ATOM",
