@@ -4,7 +4,8 @@
     "api": [
 
         {"provider": "Vinjan.Inc", "address": "https://api-main-symphony.vinjan.xyz"},
-        {"provider": "Konsortech", "address": "https://mainnet-symphony-api.konsortech.xyz"} 
+        {"provider": "Konsortech", "address": "https://mainnet-symphony-api.konsortech.xyz"},
+        {"provider": "CoreNode", "address": "https://sym-mainnet-api.corenodehq.xyz"}
 
 
     ],
