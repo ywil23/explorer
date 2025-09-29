@@ -9,7 +9,7 @@
     ],
     "rpc": [
         {"provider": "Vinjan.Inc", "address": "https://rpc-test.paxi.vinjan.xyz"},
-        {"provider": "Paxi", "address": "https://testnet-rpc.paxinet.io/"}
+        {"provider": "Paxi", "address": "https://testnet-rpc.paxinet.io"}
 
         
     ],
