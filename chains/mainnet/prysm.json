@@ -4,7 +4,7 @@
     "api": [
 
         {"provider": "Vinjan.Inc", "address": "https://api-prysm.vinjan.xyz"},
-        {"provider": "Kleomedes", "address": "https://prysm-api-devnet.kleomedes.network"}
+        {"provider": "Polkachu", "address": "https://prysm-testnet-api.polkachu.com"}
 
 
 
@@ -12,7 +12,7 @@
     "rpc": [
 
         {"provider": "Vinjan.Inc", "address": "https://rpc-prysm.vinjan.xyz"},
-        {"provider": "Kleomedes", "address": "https://prysm-rpc-devnet.kleomedes.network"}
+        {"provider": "Polkachu", "address": "https://prysm-testnet-rpc.polkachu.com"}
 
 
     ],
