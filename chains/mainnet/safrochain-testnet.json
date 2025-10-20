@@ -19,7 +19,7 @@
     "logo": "/logos/safro.png",
     "theme_color": "#099c04",
     "assets": [{
-        "base": "usafro",
+        "base": "usaf",
         "symbol": "SAF",
         "exponent": "6",
         "coingecko_id": "", 
