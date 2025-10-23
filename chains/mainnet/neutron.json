@@ -1,0 +1,28 @@
+{
+    "chain_name": "neutron",
+    "registry_name": "neutron",
+    "api": [
+        {"provider": "Neutron", "address": "https://rest-lb.neutron.org"},
+        {"provider": "Polkachu", "address": "https://neutron-api.polkachu.com"}
+
+    ],
+    "rpc": [
+        {"provider": "Neutron", "address": "https://rpc-lb.neutron.org"},
+        {"provider": "Polkachu", "address": "https://neutron-rpc.polkachu.com/"}
+        
+    ],
+    "sdk_version": "v0.50.13-neutron.0.20250512094026-b5afd837c4de",
+    "coin_type": "118",
+    "min_tx_fee": "0.005",
+    "addr_prefix": "neutron",
+    "logo": "/logos/neutron.png",
+    "theme_color": "#053ab8",
+    "assets": [
+      {
+        "base": "untrn",
+        "symbol": "NTRN",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "/logos/neutron.png"
+    }]
+}
